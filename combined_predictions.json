@@ -1,0 +1,4802 @@
+[
+  {
+    "timestamp": "2025-05-29 18:02:00",
+    "actual_close": 107006.6,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:03:00",
+    "actual_close": 107090.37,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:04:00",
+    "actual_close": 107016.04,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:05:00",
+    "actual_close": 106867.09,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:06:00",
+    "actual_close": 106894.99,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:07:00",
+    "actual_close": 106770.09,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:08:00",
+    "actual_close": 106641.59,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:09:00",
+    "actual_close": 106822.02,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:10:00",
+    "actual_close": 106909.1,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:11:00",
+    "actual_close": 106944.32,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:12:00",
+    "actual_close": 106940.0,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:13:00",
+    "actual_close": 106900.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:14:00",
+    "actual_close": 106931.07,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:15:00",
+    "actual_close": 107061.64,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:16:00",
+    "actual_close": 107129.39,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:17:00",
+    "actual_close": 107036.27,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:18:00",
+    "actual_close": 107000.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:19:00",
+    "actual_close": 107014.78,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:20:00",
+    "actual_close": 106933.72,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:21:00",
+    "actual_close": 106929.88,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:22:00",
+    "actual_close": 106909.82,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:23:00",
+    "actual_close": 107005.5,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:24:00",
+    "actual_close": 106933.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:25:00",
+    "actual_close": 106901.53,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:26:00",
+    "actual_close": 106776.85,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:27:00",
+    "actual_close": 106809.54,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:28:00",
+    "actual_close": 106885.83,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:29:00",
+    "actual_close": 106865.75,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:30:00",
+    "actual_close": 106960.0,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:31:00",
+    "actual_close": 106885.89,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:32:00",
+    "actual_close": 106778.29,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:33:00",
+    "actual_close": 106799.74,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:34:00",
+    "actual_close": 106793.73,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:35:00",
+    "actual_close": 106804.98,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:36:00",
+    "actual_close": 106828.65,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:37:00",
+    "actual_close": 106869.13,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:38:00",
+    "actual_close": 106895.21,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:39:00",
+    "actual_close": 106891.75,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:40:00",
+    "actual_close": 106913.23,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:41:00",
+    "actual_close": 106865.75,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:42:00",
+    "actual_close": 106805.66,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:43:00",
+    "actual_close": 106811.1,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:44:00",
+    "actual_close": 106869.61,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:45:00",
+    "actual_close": 106974.18,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:46:00",
+    "actual_close": 106987.16,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:47:00",
+    "actual_close": 106961.94,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:48:00",
+    "actual_close": 107025.47,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:49:00",
+    "actual_close": 106970.49,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:50:00",
+    "actual_close": 106886.9,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:51:00",
+    "actual_close": 106760.02,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:52:00",
+    "actual_close": 106800.0,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:53:00",
+    "actual_close": 106741.7,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:54:00",
+    "actual_close": 106729.06,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:55:00",
+    "actual_close": 106691.81,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:56:00",
+    "actual_close": 106595.17,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:57:00",
+    "actual_close": 106815.74,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:58:00",
+    "actual_close": 106770.99,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 18:59:00",
+    "actual_close": 106724.42,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:00:00",
+    "actual_close": 106646.69,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:01:00",
+    "actual_close": 106705.56,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:02:00",
+    "actual_close": 106787.61,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:03:00",
+    "actual_close": 106726.43,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:04:00",
+    "actual_close": 106674.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:05:00",
+    "actual_close": 106741.11,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:06:00",
+    "actual_close": 106628.32,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:07:00",
+    "actual_close": 106637.42,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:08:00",
+    "actual_close": 106712.69,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:09:00",
+    "actual_close": 106668.51,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:10:00",
+    "actual_close": 106719.65,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:11:00",
+    "actual_close": 106694.48,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:12:00",
+    "actual_close": 106739.99,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:13:00",
+    "actual_close": 106664.0,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:14:00",
+    "actual_close": 106682.73,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:15:00",
+    "actual_close": 106711.29,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:16:00",
+    "actual_close": 106792.36,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:17:00",
+    "actual_close": 106702.99,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:18:00",
+    "actual_close": 106637.41,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:19:00",
+    "actual_close": 106624.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:20:00",
+    "actual_close": 106619.16,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:21:00",
+    "actual_close": 106881.25,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:22:00",
+    "actual_close": 106799.89,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:23:00",
+    "actual_close": 106746.32,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:24:00",
+    "actual_close": 106794.31,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:25:00",
+    "actual_close": 106633.46,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:26:00",
+    "actual_close": 106690.5,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:27:00",
+    "actual_close": 106677.58,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:28:00",
+    "actual_close": 106650.0,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:29:00",
+    "actual_close": 106607.14,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:30:00",
+    "actual_close": 106718.83,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:31:00",
+    "actual_close": 106696.23,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:32:00",
+    "actual_close": 106734.34,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:33:00",
+    "actual_close": 106714.29,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:34:00",
+    "actual_close": 106643.64,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:35:00",
+    "actual_close": 106691.42,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:36:00",
+    "actual_close": 106695.6,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:37:00",
+    "actual_close": 106728.98,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:38:00",
+    "actual_close": 106751.76,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:39:00",
+    "actual_close": 106661.52,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:40:00",
+    "actual_close": 106645.48,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:41:00",
+    "actual_close": 106685.74,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:42:00",
+    "actual_close": 106415.99,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:43:00",
+    "actual_close": 106213.08,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:44:00",
+    "actual_close": 106156.42,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:45:00",
+    "actual_close": 106269.38,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:46:00",
+    "actual_close": 106713.69,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:47:00",
+    "actual_close": 106565.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:48:00",
+    "actual_close": 106475.55,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:49:00",
+    "actual_close": 106466.23,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:50:00",
+    "actual_close": 106639.99,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:51:00",
+    "actual_close": 106686.93,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:52:00",
+    "actual_close": 106644.08,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:53:00",
+    "actual_close": 106612.5,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:54:00",
+    "actual_close": 106548.0,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:55:00",
+    "actual_close": 106473.62,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:56:00",
+    "actual_close": 106372.77,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:57:00",
+    "actual_close": 106303.59,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:58:00",
+    "actual_close": 106343.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 19:59:00",
+    "actual_close": 106303.6,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:00:00",
+    "actual_close": 106333.71,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:01:00",
+    "actual_close": 106267.49,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:02:00",
+    "actual_close": 106181.63,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:03:00",
+    "actual_close": 106252.09,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:04:00",
+    "actual_close": 106242.68,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:05:00",
+    "actual_close": 106329.48,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:06:00",
+    "actual_close": 106397.41,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:07:00",
+    "actual_close": 106385.99,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:08:00",
+    "actual_close": 106442.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:09:00",
+    "actual_close": 106478.9,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:10:00",
+    "actual_close": 106465.88,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:11:00",
+    "actual_close": 106503.04,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:12:00",
+    "actual_close": 106480.0,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:13:00",
+    "actual_close": 106564.91,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:14:00",
+    "actual_close": 106484.35,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:15:00",
+    "actual_close": 106493.75,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:16:00",
+    "actual_close": 106430.2,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:17:00",
+    "actual_close": 106430.72,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:18:00",
+    "actual_close": 106371.48,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:19:00",
+    "actual_close": 106326.47,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:20:00",
+    "actual_close": 106307.25,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:21:00",
+    "actual_close": 106414.02,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:22:00",
+    "actual_close": 106400.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:23:00",
+    "actual_close": 106456.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:24:00",
+    "actual_close": 106479.8,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:25:00",
+    "actual_close": 106481.94,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:26:00",
+    "actual_close": 106595.53,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:27:00",
+    "actual_close": 106469.51,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:28:00",
+    "actual_close": 106448.02,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:29:00",
+    "actual_close": 106352.34,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:30:00",
+    "actual_close": 106458.32,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:31:00",
+    "actual_close": 106530.79,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:32:00",
+    "actual_close": 106607.52,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:33:00",
+    "actual_close": 106492.13,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:34:00",
+    "actual_close": 106557.14,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:35:00",
+    "actual_close": 106465.72,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:36:00",
+    "actual_close": 106435.15,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:37:00",
+    "actual_close": 106388.36,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:38:00",
+    "actual_close": 106353.78,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:39:00",
+    "actual_close": 106367.92,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:40:00",
+    "actual_close": 106348.87,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:41:00",
+    "actual_close": 106275.09,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:42:00",
+    "actual_close": 106205.06,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:43:00",
+    "actual_close": 106238.09,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:44:00",
+    "actual_close": 106212.11,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:45:00",
+    "actual_close": 106286.0,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:46:00",
+    "actual_close": 106299.13,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:47:00",
+    "actual_close": 106229.53,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:48:00",
+    "actual_close": 106175.84,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:49:00",
+    "actual_close": 106209.84,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:50:00",
+    "actual_close": 106242.65,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:51:00",
+    "actual_close": 106263.29,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:52:00",
+    "actual_close": 106316.14,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:53:00",
+    "actual_close": 106221.36,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:54:00",
+    "actual_close": 106177.19,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:55:00",
+    "actual_close": 106230.49,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:56:00",
+    "actual_close": 106204.82,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:57:00",
+    "actual_close": 106175.19,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:58:00",
+    "actual_close": 105954.27,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 20:59:00",
+    "actual_close": 105837.13,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:00:00",
+    "actual_close": 105905.3,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:01:00",
+    "actual_close": 105928.48,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:02:00",
+    "actual_close": 105971.87,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:03:00",
+    "actual_close": 106031.05,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:04:00",
+    "actual_close": 106016.33,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:05:00",
+    "actual_close": 106042.92,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:06:00",
+    "actual_close": 105975.14,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:07:00",
+    "actual_close": 105971.44,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:08:00",
+    "actual_close": 105925.82,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:09:00",
+    "actual_close": 105914.63,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:10:00",
+    "actual_close": 105915.69,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:11:00",
+    "actual_close": 105987.5,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:12:00",
+    "actual_close": 105787.25,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:13:00",
+    "actual_close": 105804.23,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:14:00",
+    "actual_close": 105678.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:15:00",
+    "actual_close": 105718.62,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:16:00",
+    "actual_close": 105702.71,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:17:00",
+    "actual_close": 105655.21,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:18:00",
+    "actual_close": 105696.09,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:19:00",
+    "actual_close": 105730.0,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:20:00",
+    "actual_close": 105747.47,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:21:00",
+    "actual_close": 105765.33,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:22:00",
+    "actual_close": 105820.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:23:00",
+    "actual_close": 105952.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:24:00",
+    "actual_close": 105885.08,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:25:00",
+    "actual_close": 105925.84,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:26:00",
+    "actual_close": 105971.45,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:27:00",
+    "actual_close": 105962.27,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:28:00",
+    "actual_close": 105978.52,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:29:00",
+    "actual_close": 105965.57,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:30:00",
+    "actual_close": 106028.45,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:31:00",
+    "actual_close": 105943.23,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:32:00",
+    "actual_close": 106036.0,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:33:00",
+    "actual_close": 106006.8,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:34:00",
+    "actual_close": 105969.84,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:35:00",
+    "actual_close": 105957.92,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:36:00",
+    "actual_close": 105909.25,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:37:00",
+    "actual_close": 105954.53,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:38:00",
+    "actual_close": 105960.02,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:39:00",
+    "actual_close": 105925.99,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:40:00",
+    "actual_close": 105894.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:41:00",
+    "actual_close": 105800.23,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:42:00",
+    "actual_close": 105709.62,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:43:00",
+    "actual_close": 105703.89,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:44:00",
+    "actual_close": 105766.81,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:45:00",
+    "actual_close": 105783.86,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:46:00",
+    "actual_close": 105812.23,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:47:00",
+    "actual_close": 105779.24,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:48:00",
+    "actual_close": 105768.66,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:49:00",
+    "actual_close": 105824.0,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:50:00",
+    "actual_close": 105864.12,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:51:00",
+    "actual_close": 105897.65,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:52:00",
+    "actual_close": 105769.21,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:53:00",
+    "actual_close": 105686.27,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:54:00",
+    "actual_close": 105794.89,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:55:00",
+    "actual_close": 105834.65,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:56:00",
+    "actual_close": 105770.71,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:57:00",
+    "actual_close": 105734.93,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:58:00",
+    "actual_close": 105763.0,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 21:59:00",
+    "actual_close": 105731.74,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:00:00",
+    "actual_close": 105958.25,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:01:00",
+    "actual_close": 106095.24,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:02:00",
+    "actual_close": 106117.49,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:03:00",
+    "actual_close": 106140.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:04:00",
+    "actual_close": 106124.61,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:05:00",
+    "actual_close": 106094.15,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:06:00",
+    "actual_close": 105950.48,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:07:00",
+    "actual_close": 105968.99,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:08:00",
+    "actual_close": 105951.83,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:09:00",
+    "actual_close": 105923.27,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:10:00",
+    "actual_close": 105956.24,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:11:00",
+    "actual_close": 105951.71,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:12:00",
+    "actual_close": 105959.94,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:13:00",
+    "actual_close": 105894.43,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:14:00",
+    "actual_close": 105904.77,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:15:00",
+    "actual_close": 106047.62,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:16:00",
+    "actual_close": 106100.84,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:17:00",
+    "actual_close": 106083.97,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:18:00",
+    "actual_close": 106146.49,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:19:00",
+    "actual_close": 106166.41,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:20:00",
+    "actual_close": 106160.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:21:00",
+    "actual_close": 106202.76,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:22:00",
+    "actual_close": 106121.61,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:23:00",
+    "actual_close": 106121.62,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:24:00",
+    "actual_close": 106067.5,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:25:00",
+    "actual_close": 106107.25,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:26:00",
+    "actual_close": 106142.85,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:27:00",
+    "actual_close": 106137.49,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:28:00",
+    "actual_close": 106157.08,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:29:00",
+    "actual_close": 106144.51,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:30:00",
+    "actual_close": 106179.07,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:31:00",
+    "actual_close": 106200.14,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:32:00",
+    "actual_close": 106221.9,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:33:00",
+    "actual_close": 106217.45,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:34:00",
+    "actual_close": 106181.67,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:35:00",
+    "actual_close": 106192.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:36:00",
+    "actual_close": 106189.87,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:37:00",
+    "actual_close": 106181.85,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:38:00",
+    "actual_close": 106181.84,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:39:00",
+    "actual_close": 106099.88,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:40:00",
+    "actual_close": 106075.54,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:41:00",
+    "actual_close": 106059.7,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:42:00",
+    "actual_close": 106036.79,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:43:00",
+    "actual_close": 106020.81,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:44:00",
+    "actual_close": 105951.11,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:45:00",
+    "actual_close": 105938.12,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:46:00",
+    "actual_close": 105983.86,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:47:00",
+    "actual_close": 106016.22,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:48:00",
+    "actual_close": 106047.61,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:49:00",
+    "actual_close": 106047.62,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:50:00",
+    "actual_close": 106077.18,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:51:00",
+    "actual_close": 106071.66,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:52:00",
+    "actual_close": 106095.24,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:53:00",
+    "actual_close": 106142.86,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:54:00",
+    "actual_close": 106131.33,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:55:00",
+    "actual_close": 106139.94,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:56:00",
+    "actual_close": 106169.37,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:57:00",
+    "actual_close": 106155.72,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:58:00",
+    "actual_close": 106153.93,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 22:59:00",
+    "actual_close": 106180.0,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:00:00",
+    "actual_close": 106192.59,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:01:00",
+    "actual_close": 106343.66,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:02:00",
+    "actual_close": 106298.69,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:03:00",
+    "actual_close": 106286.08,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:04:00",
+    "actual_close": 106262.37,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:05:00",
+    "actual_close": 106240.21,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:06:00",
+    "actual_close": 106231.3,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:07:00",
+    "actual_close": 106244.37,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:08:00",
+    "actual_close": 106275.3,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:09:00",
+    "actual_close": 106259.19,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:10:00",
+    "actual_close": 106274.77,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:11:00",
+    "actual_close": 106274.76,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:12:00",
+    "actual_close": 106285.72,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:13:00",
+    "actual_close": 106303.87,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:14:00",
+    "actual_close": 106343.17,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:15:00",
+    "actual_close": 106333.33,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:16:00",
+    "actual_close": 106340.61,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:17:00",
+    "actual_close": 106360.62,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:18:00",
+    "actual_close": 106398.48,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:19:00",
+    "actual_close": 106380.96,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:20:00",
+    "actual_close": 106395.0,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:21:00",
+    "actual_close": 106428.58,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:22:00",
+    "actual_close": 106442.02,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:23:00",
+    "actual_close": 106386.78,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:24:00",
+    "actual_close": 106311.37,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:25:00",
+    "actual_close": 106280.99,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:26:00",
+    "actual_close": 106280.99,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:27:00",
+    "actual_close": 106208.35,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:28:00",
+    "actual_close": 106160.54,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:29:00",
+    "actual_close": 106155.71,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:30:00",
+    "actual_close": 106155.71,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:31:00",
+    "actual_close": 106155.71,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:32:00",
+    "actual_close": 106170.57,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:33:00",
+    "actual_close": 106170.57,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:34:00",
+    "actual_close": 106201.91,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:35:00",
+    "actual_close": 106213.61,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:36:00",
+    "actual_close": 106254.15,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:37:00",
+    "actual_close": 106258.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:38:00",
+    "actual_close": 106254.48,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:39:00",
+    "actual_close": 106295.85,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:40:00",
+    "actual_close": 106333.33,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:41:00",
+    "actual_close": 106312.83,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:42:00",
+    "actual_close": 106345.66,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:43:00",
+    "actual_close": 106357.5,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:44:00",
+    "actual_close": 106332.54,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:45:00",
+    "actual_close": 106332.54,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:46:00",
+    "actual_close": 106312.51,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:47:00",
+    "actual_close": 106307.36,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:48:00",
+    "actual_close": 106275.11,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:49:00",
+    "actual_close": 106295.46,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:50:00",
+    "actual_close": 106302.99,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:51:00",
+    "actual_close": 106302.99,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:52:00",
+    "actual_close": 106302.99,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:53:00",
+    "actual_close": 106303.0,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:54:00",
+    "actual_close": 106303.0,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:55:00",
+    "actual_close": 106307.54,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:56:00",
+    "actual_close": 106411.43,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:57:00",
+    "actual_close": 106459.9,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:58:00",
+    "actual_close": 106454.05,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-29 23:59:00",
+    "actual_close": 106443.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:00:00",
+    "actual_close": 106394.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:01:00",
+    "actual_close": 106414.84,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:02:00",
+    "actual_close": 106411.72,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:03:00",
+    "actual_close": 106350.4,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:04:00",
+    "actual_close": 106325.0,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:05:00",
+    "actual_close": 106307.29,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:06:00",
+    "actual_close": 106347.99,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:07:00",
+    "actual_close": 106403.29,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:08:00",
+    "actual_close": 106382.0,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:09:00",
+    "actual_close": 106380.96,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:10:00",
+    "actual_close": 106392.74,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:11:00",
+    "actual_close": 106377.99,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:12:00",
+    "actual_close": 106333.33,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:13:00",
+    "actual_close": 106311.05,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:14:00",
+    "actual_close": 106301.05,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:15:00",
+    "actual_close": 106264.46,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:16:00",
+    "actual_close": 106240.0,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:17:00",
+    "actual_close": 106210.0,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:18:00",
+    "actual_close": 106273.37,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:19:00",
+    "actual_close": 106253.77,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:20:00",
+    "actual_close": 106253.77,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:21:00",
+    "actual_close": 106290.31,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:22:00",
+    "actual_close": 106359.84,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:23:00",
+    "actual_close": 106339.9,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:24:00",
+    "actual_close": 106322.19,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:25:00",
+    "actual_close": 106250.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:26:00",
+    "actual_close": 106203.83,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:27:00",
+    "actual_close": 106178.44,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:28:00",
+    "actual_close": 106207.61,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:29:00",
+    "actual_close": 106180.02,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:30:00",
+    "actual_close": 106188.59,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:31:00",
+    "actual_close": 106216.83,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:32:00",
+    "actual_close": 106200.9,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:33:00",
+    "actual_close": 106209.17,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:34:00",
+    "actual_close": 106202.09,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:35:00",
+    "actual_close": 106181.58,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:36:00",
+    "actual_close": 106142.87,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:37:00",
+    "actual_close": 106157.2,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:38:00",
+    "actual_close": 106138.16,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:39:00",
+    "actual_close": 106150.0,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:40:00",
+    "actual_close": 106127.86,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:41:00",
+    "actual_close": 106081.63,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:42:00",
+    "actual_close": 106084.54,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:43:00",
+    "actual_close": 106079.21,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:44:00",
+    "actual_close": 106076.44,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:45:00",
+    "actual_close": 106051.27,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:46:00",
+    "actual_close": 106010.76,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:47:00",
+    "actual_close": 106009.99,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:48:00",
+    "actual_close": 106071.99,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:49:00",
+    "actual_close": 106135.51,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:50:00",
+    "actual_close": 106135.51,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:51:00",
+    "actual_close": 106102.99,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:52:00",
+    "actual_close": 106142.34,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:53:00",
+    "actual_close": 106155.71,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:54:00",
+    "actual_close": 106100.55,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:55:00",
+    "actual_close": 106008.75,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:56:00",
+    "actual_close": 105959.8,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:57:00",
+    "actual_close": 105979.73,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:58:00",
+    "actual_close": 105961.5,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 00:59:00",
+    "actual_close": 105929.07,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:00:00",
+    "actual_close": 105982.82,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:01:00",
+    "actual_close": 105952.5,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:02:00",
+    "actual_close": 105980.08,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:03:00",
+    "actual_close": 106000.0,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:04:00",
+    "actual_close": 105960.59,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:05:00",
+    "actual_close": 105970.09,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:06:00",
+    "actual_close": 106031.61,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:07:00",
+    "actual_close": 106041.05,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:08:00",
+    "actual_close": 106047.62,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:09:00",
+    "actual_close": 106060.86,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:10:00",
+    "actual_close": 106020.0,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:11:00",
+    "actual_close": 106031.84,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:12:00",
+    "actual_close": 105973.1,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:13:00",
+    "actual_close": 105984.12,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:14:00",
+    "actual_close": 105977.4,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:15:00",
+    "actual_close": 105965.18,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:16:00",
+    "actual_close": 105985.33,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:17:00",
+    "actual_close": 105787.47,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:18:00",
+    "actual_close": 105833.53,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:19:00",
+    "actual_close": 105799.04,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:20:00",
+    "actual_close": 105839.83,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:21:00",
+    "actual_close": 105849.85,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:22:00",
+    "actual_close": 105769.69,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:23:00",
+    "actual_close": 105781.41,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:24:00",
+    "actual_close": 105720.23,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:25:00",
+    "actual_close": 105738.28,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:26:00",
+    "actual_close": 105770.31,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:27:00",
+    "actual_close": 105683.58,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:28:00",
+    "actual_close": 105689.7,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:29:00",
+    "actual_close": 105748.6,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:30:00",
+    "actual_close": 105668.89,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:31:00",
+    "actual_close": 105736.56,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:32:00",
+    "actual_close": 105847.65,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:33:00",
+    "actual_close": 105828.17,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:34:00",
+    "actual_close": 105741.8,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:35:00",
+    "actual_close": 105761.9,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:36:00",
+    "actual_close": 105832.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:37:00",
+    "actual_close": 105790.91,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:38:00",
+    "actual_close": 105817.56,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:39:00",
+    "actual_close": 105863.66,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:40:00",
+    "actual_close": 105873.28,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:41:00",
+    "actual_close": 105853.47,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:42:00",
+    "actual_close": 105857.14,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:43:00",
+    "actual_close": 105812.57,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:44:00",
+    "actual_close": 105740.36,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:45:00",
+    "actual_close": 105797.78,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:46:00",
+    "actual_close": 105767.29,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:47:00",
+    "actual_close": 105717.97,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:48:00",
+    "actual_close": 105347.4,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:49:00",
+    "actual_close": 105498.7,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:50:00",
+    "actual_close": 105585.24,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:51:00",
+    "actual_close": 105581.03,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:52:00",
+    "actual_close": 105587.84,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:53:00",
+    "actual_close": 105699.99,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:54:00",
+    "actual_close": 105689.22,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:55:00",
+    "actual_close": 105619.05,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:56:00",
+    "actual_close": 105605.85,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:57:00",
+    "actual_close": 105639.51,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:58:00",
+    "actual_close": 105666.67,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 01:59:00",
+    "actual_close": 105589.75,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:00:00",
+    "actual_close": 105619.04,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:01:00",
+    "actual_close": 105729.42,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:02:00",
+    "actual_close": 105758.25,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:03:00",
+    "actual_close": 105731.59,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:04:00",
+    "actual_close": 105737.11,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:05:00",
+    "actual_close": 105871.27,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:06:00",
+    "actual_close": 105875.4,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:07:00",
+    "actual_close": 105833.41,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:08:00",
+    "actual_close": 105875.4,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:09:00",
+    "actual_close": 105885.41,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:10:00",
+    "actual_close": 105885.92,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:11:00",
+    "actual_close": 105888.91,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:12:00",
+    "actual_close": 105922.82,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:13:00",
+    "actual_close": 105980.37,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:14:00",
+    "actual_close": 105920.15,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:15:00",
+    "actual_close": 105947.27,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:16:00",
+    "actual_close": 106030.73,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:17:00",
+    "actual_close": 105997.34,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:18:00",
+    "actual_close": 106005.59,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:19:00",
+    "actual_close": 105952.94,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:20:00",
+    "actual_close": 106012.65,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:21:00",
+    "actual_close": 106000.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:22:00",
+    "actual_close": 106050.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:23:00",
+    "actual_close": 106095.23,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:24:00",
+    "actual_close": 106114.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:25:00",
+    "actual_close": 106123.89,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:26:00",
+    "actual_close": 106214.92,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:27:00",
+    "actual_close": 106069.88,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:28:00",
+    "actual_close": 106001.1,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:29:00",
+    "actual_close": 106062.85,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:30:00",
+    "actual_close": 105987.98,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:31:00",
+    "actual_close": 105946.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:32:00",
+    "actual_close": 105885.5,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:33:00",
+    "actual_close": 105865.67,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:34:00",
+    "actual_close": 105867.1,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:35:00",
+    "actual_close": 105880.28,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:36:00",
+    "actual_close": 105904.76,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:37:00",
+    "actual_close": 105927.56,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:38:00",
+    "actual_close": 105904.76,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:39:00",
+    "actual_close": 105937.86,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:40:00",
+    "actual_close": 105980.0,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:41:00",
+    "actual_close": 105990.49,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:42:00",
+    "actual_close": 105983.88,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:43:00",
+    "actual_close": 105936.66,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:44:00",
+    "actual_close": 105818.68,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:45:00",
+    "actual_close": 105799.92,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:46:00",
+    "actual_close": 105704.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:47:00",
+    "actual_close": 105708.25,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:48:00",
+    "actual_close": 105698.27,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:49:00",
+    "actual_close": 105460.0,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:50:00",
+    "actual_close": 105566.83,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:51:00",
+    "actual_close": 105636.98,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:52:00",
+    "actual_close": 105588.41,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:53:00",
+    "actual_close": 105377.62,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:54:00",
+    "actual_close": 105322.0,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:55:00",
+    "actual_close": 105294.72,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:56:00",
+    "actual_close": 105195.67,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:57:00",
+    "actual_close": 104961.53,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:58:00",
+    "actual_close": 104648.2,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 02:59:00",
+    "actual_close": 104939.99,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:00:00",
+    "actual_close": 105221.51,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:01:00",
+    "actual_close": 105260.0,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:02:00",
+    "actual_close": 105247.99,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:03:00",
+    "actual_close": 105271.15,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:04:00",
+    "actual_close": 105101.95,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:05:00",
+    "actual_close": 105193.07,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:06:00",
+    "actual_close": 105226.4,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:07:00",
+    "actual_close": 105357.66,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:08:00",
+    "actual_close": 105483.13,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:09:00",
+    "actual_close": 105392.4,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:10:00",
+    "actual_close": 105429.47,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:11:00",
+    "actual_close": 105364.9,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:12:00",
+    "actual_close": 105467.66,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:13:00",
+    "actual_close": 105457.74,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:14:00",
+    "actual_close": 105517.9,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:15:00",
+    "actual_close": 105550.09,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:16:00",
+    "actual_close": 105523.81,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:17:00",
+    "actual_close": 105493.82,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:18:00",
+    "actual_close": 105506.47,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:19:00",
+    "actual_close": 105455.02,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:20:00",
+    "actual_close": 105374.08,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:21:00",
+    "actual_close": 105363.82,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:22:00",
+    "actual_close": 105372.65,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:23:00",
+    "actual_close": 105531.05,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:24:00",
+    "actual_close": 105619.05,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:25:00",
+    "actual_close": 105653.85,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:26:00",
+    "actual_close": 105739.99,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:27:00",
+    "actual_close": 105705.8,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:28:00",
+    "actual_close": 105727.05,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:29:00",
+    "actual_close": 105731.72,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:30:00",
+    "actual_close": 105762.85,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:31:00",
+    "actual_close": 105744.32,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:32:00",
+    "actual_close": 105650.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:33:00",
+    "actual_close": 105671.29,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:34:00",
+    "actual_close": 105621.12,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:35:00",
+    "actual_close": 105619.04,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:36:00",
+    "actual_close": 105648.7,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:37:00",
+    "actual_close": 105764.55,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:38:00",
+    "actual_close": 105809.52,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:39:00",
+    "actual_close": 105821.28,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:40:00",
+    "actual_close": 105805.49,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:41:00",
+    "actual_close": 105803.24,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:42:00",
+    "actual_close": 105842.45,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:43:00",
+    "actual_close": 105828.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:44:00",
+    "actual_close": 105872.47,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:45:00",
+    "actual_close": 105910.8,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:46:00",
+    "actual_close": 105835.51,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:47:00",
+    "actual_close": 105792.2,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:48:00",
+    "actual_close": 105726.66,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:49:00",
+    "actual_close": 105713.82,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:50:00",
+    "actual_close": 105595.58,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:51:00",
+    "actual_close": 105659.28,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:52:00",
+    "actual_close": 105667.26,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:53:00",
+    "actual_close": 105677.93,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:54:00",
+    "actual_close": 105645.84,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:55:00",
+    "actual_close": 105636.17,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:56:00",
+    "actual_close": 105649.73,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:57:00",
+    "actual_close": 105670.35,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:58:00",
+    "actual_close": 105699.99,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 03:59:00",
+    "actual_close": 105666.66,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:00:00",
+    "actual_close": 105694.22,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:01:00",
+    "actual_close": 105679.78,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:02:00",
+    "actual_close": 105724.28,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:03:00",
+    "actual_close": 105838.84,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:04:00",
+    "actual_close": 105900.0,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:05:00",
+    "actual_close": 105915.19,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:06:00",
+    "actual_close": 105888.26,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:07:00",
+    "actual_close": 105932.83,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:08:00",
+    "actual_close": 105979.55,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:09:00",
+    "actual_close": 105988.34,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:10:00",
+    "actual_close": 106022.24,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:11:00",
+    "actual_close": 105981.45,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:12:00",
+    "actual_close": 105927.47,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:13:00",
+    "actual_close": 105886.59,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:14:00",
+    "actual_close": 105943.69,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:15:00",
+    "actual_close": 105980.0,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:16:00",
+    "actual_close": 105914.11,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:17:00",
+    "actual_close": 105910.33,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:18:00",
+    "actual_close": 105989.95,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:19:00",
+    "actual_close": 106039.54,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:20:00",
+    "actual_close": 106078.42,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:21:00",
+    "actual_close": 106036.15,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:22:00",
+    "actual_close": 105975.61,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:23:00",
+    "actual_close": 106047.61,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:24:00",
+    "actual_close": 106057.94,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:25:00",
+    "actual_close": 106023.53,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:26:00",
+    "actual_close": 105988.8,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:27:00",
+    "actual_close": 105988.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:28:00",
+    "actual_close": 105982.93,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:29:00",
+    "actual_close": 105980.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:30:00",
+    "actual_close": 105941.06,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:31:00",
+    "actual_close": 105977.03,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:32:00",
+    "actual_close": 106031.91,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:33:00",
+    "actual_close": 105953.37,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:34:00",
+    "actual_close": 105947.36,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:35:00",
+    "actual_close": 105963.18,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:36:00",
+    "actual_close": 106080.91,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:37:00",
+    "actual_close": 106020.0,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:38:00",
+    "actual_close": 106012.78,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:39:00",
+    "actual_close": 106066.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:40:00",
+    "actual_close": 106114.51,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:41:00",
+    "actual_close": 106118.84,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:42:00",
+    "actual_close": 106074.92,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:43:00",
+    "actual_close": 106092.0,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:44:00",
+    "actual_close": 106143.34,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:45:00",
+    "actual_close": 106125.05,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:46:00",
+    "actual_close": 106087.96,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:47:00",
+    "actual_close": 106125.03,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:48:00",
+    "actual_close": 106079.71,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:49:00",
+    "actual_close": 106099.99,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:50:00",
+    "actual_close": 106030.82,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:51:00",
+    "actual_close": 106047.62,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:52:00",
+    "actual_close": 106029.7,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:53:00",
+    "actual_close": 106020.0,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:54:00",
+    "actual_close": 105988.0,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:55:00",
+    "actual_close": 105957.29,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:56:00",
+    "actual_close": 105967.0,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:57:00",
+    "actual_close": 105967.0,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:58:00",
+    "actual_close": 106013.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 04:59:00",
+    "actual_close": 106000.0,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:00:00",
+    "actual_close": 105963.1,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:01:00",
+    "actual_close": 105982.71,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:02:00",
+    "actual_close": 105950.12,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:03:00",
+    "actual_close": 105953.86,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:04:00",
+    "actual_close": 105971.96,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:05:00",
+    "actual_close": 106002.7,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:06:00",
+    "actual_close": 105973.15,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:07:00",
+    "actual_close": 106045.68,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:08:00",
+    "actual_close": 106019.36,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:09:00",
+    "actual_close": 105942.8,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:10:00",
+    "actual_close": 105963.82,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:11:00",
+    "actual_close": 106017.97,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:12:00",
+    "actual_close": 106021.58,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:13:00",
+    "actual_close": 105990.68,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:14:00",
+    "actual_close": 106004.77,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:15:00",
+    "actual_close": 106020.02,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:16:00",
+    "actual_close": 106020.58,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:17:00",
+    "actual_close": 106069.92,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:18:00",
+    "actual_close": 106137.12,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:19:00",
+    "actual_close": 106111.18,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:20:00",
+    "actual_close": 106095.22,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:21:00",
+    "actual_close": 106057.31,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:22:00",
+    "actual_close": 106082.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:23:00",
+    "actual_close": 106084.68,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:24:00",
+    "actual_close": 106115.18,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:25:00",
+    "actual_close": 106087.69,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:26:00",
+    "actual_close": 106128.41,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:27:00",
+    "actual_close": 106125.85,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:28:00",
+    "actual_close": 106158.22,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:29:00",
+    "actual_close": 106152.66,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:30:00",
+    "actual_close": 106152.31,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:31:00",
+    "actual_close": 106152.31,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:32:00",
+    "actual_close": 106118.54,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:33:00",
+    "actual_close": 106167.24,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:34:00",
+    "actual_close": 106109.53,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:35:00",
+    "actual_close": 106153.45,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:36:00",
+    "actual_close": 106189.18,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:37:00",
+    "actual_close": 106172.76,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:38:00",
+    "actual_close": 106124.54,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:39:00",
+    "actual_close": 106151.34,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:40:00",
+    "actual_close": 106141.3,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:41:00",
+    "actual_close": 106083.96,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:42:00",
+    "actual_close": 106092.8,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:43:00",
+    "actual_close": 106092.79,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:44:00",
+    "actual_close": 106109.2,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:45:00",
+    "actual_close": 106086.19,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:46:00",
+    "actual_close": 106084.05,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:47:00",
+    "actual_close": 106050.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:48:00",
+    "actual_close": 106102.79,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:49:00",
+    "actual_close": 106087.83,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:50:00",
+    "actual_close": 106037.85,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:51:00",
+    "actual_close": 106022.55,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:52:00",
+    "actual_close": 106006.55,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:53:00",
+    "actual_close": 106045.68,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:54:00",
+    "actual_close": 106030.91,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:55:00",
+    "actual_close": 106031.62,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:56:00",
+    "actual_close": 105980.9,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:57:00",
+    "actual_close": 105999.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:58:00",
+    "actual_close": 105999.12,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 05:59:00",
+    "actual_close": 106024.33,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:00:00",
+    "actual_close": 105999.99,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:01:00",
+    "actual_close": 105966.08,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:02:00",
+    "actual_close": 105965.91,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:03:00",
+    "actual_close": 105960.84,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:04:00",
+    "actual_close": 105942.89,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:05:00",
+    "actual_close": 106000.96,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:06:00",
+    "actual_close": 105986.3,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:07:00",
+    "actual_close": 105943.98,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:08:00",
+    "actual_close": 105929.99,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:09:00",
+    "actual_close": 105956.08,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:10:00",
+    "actual_close": 106019.99,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:11:00",
+    "actual_close": 106044.35,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:12:00",
+    "actual_close": 106075.47,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:13:00",
+    "actual_close": 106045.6,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:14:00",
+    "actual_close": 105961.85,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:15:00",
+    "actual_close": 105992.25,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:16:00",
+    "actual_close": 106039.47,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:17:00",
+    "actual_close": 106028.51,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:18:00",
+    "actual_close": 106008.57,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:19:00",
+    "actual_close": 105941.81,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:20:00",
+    "actual_close": 105923.11,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:21:00",
+    "actual_close": 105932.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:22:00",
+    "actual_close": 105984.95,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:23:00",
+    "actual_close": 105994.22,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:24:00",
+    "actual_close": 105961.17,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:25:00",
+    "actual_close": 105999.15,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:26:00",
+    "actual_close": 105999.15,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:27:00",
+    "actual_close": 105962.21,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:28:00",
+    "actual_close": 105933.68,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:29:00",
+    "actual_close": 105995.1,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:30:00",
+    "actual_close": 105946.83,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:31:00",
+    "actual_close": 105920.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:32:00",
+    "actual_close": 105945.54,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:33:00",
+    "actual_close": 105926.17,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:34:00",
+    "actual_close": 105962.12,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:35:00",
+    "actual_close": 105975.49,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:36:00",
+    "actual_close": 105975.41,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:37:00",
+    "actual_close": 105940.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:38:00",
+    "actual_close": 105945.55,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:39:00",
+    "actual_close": 105952.3,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:40:00",
+    "actual_close": 105945.52,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:41:00",
+    "actual_close": 105948.7,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:42:00",
+    "actual_close": 105948.69,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:43:00",
+    "actual_close": 105985.22,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:44:00",
+    "actual_close": 106000.0,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:45:00",
+    "actual_close": 106037.17,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:46:00",
+    "actual_close": 106087.59,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:47:00",
+    "actual_close": 106100.0,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:48:00",
+    "actual_close": 106102.75,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:49:00",
+    "actual_close": 106090.18,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:50:00",
+    "actual_close": 106075.11,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:51:00",
+    "actual_close": 106056.57,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:52:00",
+    "actual_close": 106057.42,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:53:00",
+    "actual_close": 106095.24,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:54:00",
+    "actual_close": 106108.3,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:55:00",
+    "actual_close": 106116.86,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:56:00",
+    "actual_close": 106116.2,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:57:00",
+    "actual_close": 106124.06,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:58:00",
+    "actual_close": 106101.46,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 06:59:00",
+    "actual_close": 106112.08,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:00:00",
+    "actual_close": 106152.82,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:01:00",
+    "actual_close": 106154.87,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:02:00",
+    "actual_close": 106170.22,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:03:00",
+    "actual_close": 106211.76,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:04:00",
+    "actual_close": 106167.73,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:05:00",
+    "actual_close": 106165.65,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:06:00",
+    "actual_close": 106142.86,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:07:00",
+    "actual_close": 106135.06,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:08:00",
+    "actual_close": 106142.86,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:09:00",
+    "actual_close": 106141.18,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:10:00",
+    "actual_close": 106139.32,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:11:00",
+    "actual_close": 106128.62,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:12:00",
+    "actual_close": 106112.0,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:13:00",
+    "actual_close": 106106.8,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:14:00",
+    "actual_close": 106095.24,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:15:00",
+    "actual_close": 106116.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:16:00",
+    "actual_close": 106102.51,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:17:00",
+    "actual_close": 106068.37,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:18:00",
+    "actual_close": 106088.67,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:19:00",
+    "actual_close": 106109.99,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:20:00",
+    "actual_close": 106119.05,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:21:00",
+    "actual_close": 106126.68,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:22:00",
+    "actual_close": 106126.69,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:23:00",
+    "actual_close": 106173.89,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:24:00",
+    "actual_close": 106201.11,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:25:00",
+    "actual_close": 106199.67,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:26:00",
+    "actual_close": 106199.59,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:27:00",
+    "actual_close": 106199.6,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:28:00",
+    "actual_close": 106160.82,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:29:00",
+    "actual_close": 106186.33,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:30:00",
+    "actual_close": 106186.33,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:31:00",
+    "actual_close": 106216.0,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:32:00",
+    "actual_close": 106190.48,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:33:00",
+    "actual_close": 106176.16,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:34:00",
+    "actual_close": 106224.56,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:35:00",
+    "actual_close": 106247.37,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:36:00",
+    "actual_close": 106252.21,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:37:00",
+    "actual_close": 106299.99,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:38:00",
+    "actual_close": 106311.69,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:39:00",
+    "actual_close": 106271.99,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:40:00",
+    "actual_close": 106266.02,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:41:00",
+    "actual_close": 106244.47,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:42:00",
+    "actual_close": 106228.95,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:43:00",
+    "actual_close": 106238.03,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:44:00",
+    "actual_close": 106261.27,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:45:00",
+    "actual_close": 106250.9,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:46:00",
+    "actual_close": 106226.57,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:47:00",
+    "actual_close": 106218.17,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:48:00",
+    "actual_close": 106088.77,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:49:00",
+    "actual_close": 106076.27,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:50:00",
+    "actual_close": 106075.79,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:51:00",
+    "actual_close": 106037.3,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:52:00",
+    "actual_close": 106090.75,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:53:00",
+    "actual_close": 106093.94,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:54:00",
+    "actual_close": 106093.95,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:55:00",
+    "actual_close": 106075.84,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:56:00",
+    "actual_close": 106083.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:57:00",
+    "actual_close": 106042.67,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:58:00",
+    "actual_close": 106090.76,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 07:59:00",
+    "actual_close": 106083.42,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:00:00",
+    "actual_close": 106087.1,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:01:00",
+    "actual_close": 106063.78,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:02:00",
+    "actual_close": 106071.54,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:03:00",
+    "actual_close": 106037.66,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:04:00",
+    "actual_close": 106031.87,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:05:00",
+    "actual_close": 106036.56,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:06:00",
+    "actual_close": 106028.26,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:07:00",
+    "actual_close": 106050.74,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:08:00",
+    "actual_close": 106082.03,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:09:00",
+    "actual_close": 106132.69,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:10:00",
+    "actual_close": 106087.2,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:11:00",
+    "actual_close": 106085.94,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:12:00",
+    "actual_close": 106117.64,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:13:00",
+    "actual_close": 106091.02,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:14:00",
+    "actual_close": 106080.04,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:15:00",
+    "actual_close": 106021.41,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:16:00",
+    "actual_close": 106021.2,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:17:00",
+    "actual_close": 106002.08,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:18:00",
+    "actual_close": 106066.63,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:19:00",
+    "actual_close": 106028.42,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:20:00",
+    "actual_close": 106011.12,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:21:00",
+    "actual_close": 106010.91,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:22:00",
+    "actual_close": 106022.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:23:00",
+    "actual_close": 106021.99,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:24:00",
+    "actual_close": 106013.14,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:25:00",
+    "actual_close": 106017.7,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:26:00",
+    "actual_close": 105999.02,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:27:00",
+    "actual_close": 105960.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:28:00",
+    "actual_close": 105978.33,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:29:00",
+    "actual_close": 105949.49,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:30:00",
+    "actual_close": 105937.34,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:31:00",
+    "actual_close": 105932.94,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:32:00",
+    "actual_close": 105923.66,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:33:00",
+    "actual_close": 105919.18,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:34:00",
+    "actual_close": 105971.97,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:35:00",
+    "actual_close": 106030.63,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:36:00",
+    "actual_close": 105969.99,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:37:00",
+    "actual_close": 105893.87,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:38:00",
+    "actual_close": 105888.88,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:39:00",
+    "actual_close": 105870.99,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:40:00",
+    "actual_close": 105859.03,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:41:00",
+    "actual_close": 105818.94,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:42:00",
+    "actual_close": 105838.06,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:43:00",
+    "actual_close": 105839.99,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:44:00",
+    "actual_close": 105830.87,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:45:00",
+    "actual_close": 105814.73,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:46:00",
+    "actual_close": 105809.8,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:47:00",
+    "actual_close": 105692.32,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:48:00",
+    "actual_close": 105671.4,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:49:00",
+    "actual_close": 105674.0,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:50:00",
+    "actual_close": 105705.74,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:51:00",
+    "actual_close": 105666.67,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:52:00",
+    "actual_close": 105637.02,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:53:00",
+    "actual_close": 105646.69,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:54:00",
+    "actual_close": 105549.19,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:55:00",
+    "actual_close": 105689.93,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:56:00",
+    "actual_close": 105775.83,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:57:00",
+    "actual_close": 105688.42,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:58:00",
+    "actual_close": 105683.79,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 08:59:00",
+    "actual_close": 105711.77,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:00:00",
+    "actual_close": 105702.36,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:01:00",
+    "actual_close": 105792.42,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:02:00",
+    "actual_close": 105783.97,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:03:00",
+    "actual_close": 105809.4,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:04:00",
+    "actual_close": 105830.0,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:05:00",
+    "actual_close": 105819.96,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:06:00",
+    "actual_close": 105753.98,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:07:00",
+    "actual_close": 105700.36,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:08:00",
+    "actual_close": 105438.33,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:09:00",
+    "actual_close": 105540.87,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:10:00",
+    "actual_close": 105509.46,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:11:00",
+    "actual_close": 105475.3,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:12:00",
+    "actual_close": 105577.63,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:13:00",
+    "actual_close": 105635.11,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:14:00",
+    "actual_close": 105525.95,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:15:00",
+    "actual_close": 105555.97,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:16:00",
+    "actual_close": 105568.2,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:17:00",
+    "actual_close": 105615.99,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:18:00",
+    "actual_close": 105627.23,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:19:00",
+    "actual_close": 105539.26,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:20:00",
+    "actual_close": 105597.25,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:21:00",
+    "actual_close": 105757.6,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:22:00",
+    "actual_close": 105820.01,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:23:00",
+    "actual_close": 105730.67,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:24:00",
+    "actual_close": 105675.58,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:25:00",
+    "actual_close": 105656.76,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:26:00",
+    "actual_close": 105633.17,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:27:00",
+    "actual_close": 105627.44,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:28:00",
+    "actual_close": 105673.84,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:29:00",
+    "actual_close": 105616.19,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:30:00",
+    "actual_close": 105516.2,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:31:00",
+    "actual_close": 105482.35,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:32:00",
+    "actual_close": 105356.49,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:33:00",
+    "actual_close": 105307.73,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:34:00",
+    "actual_close": 105213.97,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:35:00",
+    "actual_close": 105168.44,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:36:00",
+    "actual_close": 105052.83,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:37:00",
+    "actual_close": 105179.4,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:38:00",
+    "actual_close": 105264.21,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:39:00",
+    "actual_close": 105207.47,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:40:00",
+    "actual_close": 105080.14,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:41:00",
+    "actual_close": 105175.25,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:42:00",
+    "actual_close": 105207.17,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:43:00",
+    "actual_close": 105095.23,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:44:00",
+    "actual_close": 105063.37,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:45:00",
+    "actual_close": 104898.06,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:46:00",
+    "actual_close": 104756.81,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:47:00",
+    "actual_close": 104869.48,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:48:00",
+    "actual_close": 104979.09,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:49:00",
+    "actual_close": 104919.56,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:50:00",
+    "actual_close": 105044.25,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:51:00",
+    "actual_close": 104991.81,
+    "predicted_close": null
+  },
+  {
+    "timestamp": "2025-05-30 09:52:00",
+    "actual_close": null,
+    "predicted_close": 104923.44029554357
+  },
+  {
+    "timestamp": "2025-05-30 09:53:00",
+    "actual_close": null,
+    "predicted_close": 104933.56619815718
+  },
+  {
+    "timestamp": "2025-05-30 09:54:00",
+    "actual_close": null,
+    "predicted_close": 104947.70464641928
+  },
+  {
+    "timestamp": "2025-05-30 09:55:00",
+    "actual_close": null,
+    "predicted_close": 104960.78234290834
+  },
+  {
+    "timestamp": "2025-05-30 09:56:00",
+    "actual_close": null,
+    "predicted_close": 104917.99452416954
+  },
+  {
+    "timestamp": "2025-05-30 09:57:00",
+    "actual_close": null,
+    "predicted_close": 104930.68159360506
+  },
+  {
+    "timestamp": "2025-05-30 09:58:00",
+    "actual_close": null,
+    "predicted_close": 104944.81965320381
+  },
+  {
+    "timestamp": "2025-05-30 09:59:00",
+    "actual_close": null,
+    "predicted_close": 104957.30699198207
+  },
+  {
+    "timestamp": "2025-05-30 10:00:00",
+    "actual_close": null,
+    "predicted_close": 104914.52058998847
+  },
+  {
+    "timestamp": "2025-05-30 10:01:00",
+    "actual_close": null,
+    "predicted_close": 104927.2072393431
+  }
+]

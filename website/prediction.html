@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bitcoin Kurs & Minütliche Vorhersage</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Luxon Core -->
+  <script src="https://cdn.jsdelivr.net/npm/luxon@3/build/global/luxon.min.js"></script>
+  <!-- Chart.js Luxon Adapter -->
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@1"></script>
+
+  <style>
+    .tooltip-icon {
+      cursor: pointer;
+      color: #0d6efd;
+      margin-left: 6px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+  <div class="container">
+    <a class="navbar-brand" href="#">Bitcoin Dashboard</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="index.html">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Prediction</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="row mb-4">
+    <div class="col">
+      <h2 class="text-center">
+        Tatsächlicher Kurs und minütliche Vorhersage
+        <i class="bi bi-info-circle-fill tooltip-icon"
+           data-bs-toggle="tooltip" data-bs-placement="right"
+           title="Zeigt den tatsächlichen Bitcoin Schlusskurs und die minütliche Vorhersage des Modells."></i>
+      </h2>
+      <canvas id="combinedChart" style="max-height: 450px;"></canvas>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Tooltip initialisieren
+  document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => {
+    new bootstrap.Tooltip(el);
+  });
+</script>
+
+<script>
+  let fullData = [];
+  let combinedChart;
+
+  // Daten laden und Chart initialisieren
+  fetch('../combined_predictions.json')
+    .then(res => res.json())
+    .then(data => {
+        console.log('Geladene Vorhersagedaten:', data);
+
+
+        if (data.length > 70) {
+            data = data.slice(-70);
+            fullData = data; // Speichern der Daten
+        }
+        
+
+      //fullData = data; // Speichern der Daten
+
+      // Erstellen der tatsächlichen und vorhergesagten Kurs-Daten
+      const actualData = fullData
+        .filter(d => d.actual_close !== null)
+        .map(d => ({ x: new Date(d.timestamp), y: +d.actual_close }));
+
+      const predictedData = fullData
+        .filter(d => d.predicted_close !== null)
+        .map(d => ({ x: new Date(d.timestamp), y: +d.predicted_close }));
+
+      // Chart initialisieren
+      const ctx = document.getElementById('combinedChart').getContext('2d');
+      combinedChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          datasets: [
+            {
+              label: 'Tatsächlicher Kurs',
+              data: actualData,
+              borderColor: 'rgba(40, 167, 69, 1)',
+              fill: false,
+              tension: 0.2,
+              spanGaps: true,
+            },
+            {
+              label: 'Vorhersage (minütlich)',
+              data: predictedData,
+              borderColor: 'rgba(255, 99, 132, 1)',
+              borderDash: [10, 5],
+              fill: false,
+              tension: 0.2,
+              spanGaps: true,
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          scales: {
+            x: {
+              type: 'time',
+              time: {
+                tooltipFormat: 'yyyy-MM-dd HH:mm',
+                unit: 'minute',
+                displayFormats: { minute: 'HH:mm' }
+              },
+              title: {
+                display: true,
+                text: 'Zeit'
+              }
+            },
+            y: {
+              title: {
+                display: true,
+                text: 'Preis (USD)'
+              }
+            }
+          },
+          interaction: {
+            mode: 'nearest',
+            intersect: false
+          },
+          plugins: {
+            tooltip: { enabled: true }
+          }
+        }
+      });
+    })
+    .catch(err => console.error('Fehler beim Laden der Vorhersagedaten:', err));
+</script>
+
+</body>
+</html>

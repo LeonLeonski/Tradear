@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bitcoin Dashboard</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    .tooltip-icon {
+      cursor: pointer;
+      color: #0d6efd;
+      margin-left: 6px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+  <div class="container">
+    <a class="navbar-brand" href="#">Bitcoin Dashboard</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="prediction.html">Prediction</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <!-- Zeitraum-Filter -->
+  <div class="row mb-3">
+    <div class="col-md-4 offset-md-4">
+      <label for="timeRange" class="form-label">Zeitraum auswählen:</label>
+      <select id="timeRange" class="form-select">
+        <option value="60">Letzte 1 Stunde</option>
+        <option value="360">Letzte 6 Stunden</option>
+        <option value="720">Letzte 12 Stunden</option>
+        <option value="1440" selected>Letzte 24 Stunden</option>
+        <option value="all">Alle Daten</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row mb-4">
+    <div class="col">
+      <h2 class="text-center">
+        Bitcoin Kurs (Close)
+        <i class="bi bi-info-circle-fill tooltip-icon" 
+           data-bs-toggle="tooltip" data-bs-placement="right" 
+           title="Zeigt den Schlusskurs von Bitcoin über die Zeit an."></i>
+      </h2>
+      <canvas id="bitcoinChart" style="max-height: 400px;"></canvas>
+    </div>
+  </div>
+
+  <div class="row mb-4">
+    <div class="col-md-6">
+      <h3 class="text-center">
+        Gleitende Durchschnitte (SMA 20 & 50)
+        <i class="bi bi-info-circle-fill tooltip-icon" 
+           data-bs-toggle="tooltip" data-bs-placement="right" 
+           title="Zeigt die gleitenden Durchschnitte über 20 und 50 Perioden zur Trendanalyse."></i>
+      </h3>
+      <canvas id="smaChart" style="max-height: 350px;"></canvas>
+    </div>
+    <div class="col-md-6">
+      <h3 class="text-center">
+        Volatilität (ATR 14)
+        <i class="bi bi-info-circle-fill tooltip-icon" 
+           data-bs-toggle="tooltip" data-bs-placement="right" 
+           title="Average True Range (ATR) misst die Marktvolatilität über 14 Perioden."></i>
+      </h3>
+      <canvas id="atrChart" style="max-height: 350px;"></canvas>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Tooltip initialisieren
+  document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => {
+    new bootstrap.Tooltip(el);
+  });
+</script>
+
+<script>
+  let fullData = [];
+  let bitcoinChart, smaChart, atrChart;
+
+  // Daten laden und Charts initialisieren
+  fetch('../calculated_bitcoin_data.json')
+    .then(response => response.json())
+    .then(data => {
+      fullData = data;
+      initCharts();
+      updateCharts('1440'); // Standard 24 Stunden
+    })
+    .catch(err => console.error('Fehler beim Laden der Daten:', err));
+
+  // Funktion zum Filtern der Daten nach Minuten
+  function filterData(minutes) {
+    if (minutes === 'all') return fullData;
+
+    const now = new Date(fullData[fullData.length - 1].timestamp);
+    const cutoff = new Date(now);
+    cutoff.setMinutes(cutoff.getMinutes() - parseInt(minutes));
+
+    return fullData.filter(d => new Date(d.timestamp) >= cutoff);
+  }
+
+  // Charts initialisieren (erstmal leer)
+  function initCharts() {
+    const ctx1 = document.getElementById('bitcoinChart').getContext('2d');
+    bitcoinChart = new Chart(ctx1, {
+      type: 'line',
+      data: { labels: [], datasets: [{
+        label: 'Bitcoin Kurs (Close)',
+        data: [],
+        borderColor: 'rgba(40, 167, 69, 1)',
+        backgroundColor: 'rgba(40, 167, 69, 0.1)',
+        fill: true,
+        tension: 0.2,
+      }]},
+      options: { responsive: true, scales: { x: { title: { display: true, text: 'Zeit' } }, y: { title: { display: true, text: 'Preis (USD)' } } } }
+    });
+
+    const ctx2 = document.getElementById('smaChart').getContext('2d');
+    smaChart = new Chart(ctx2, {
+      type: 'line',
+      data: { labels: [], datasets: [
+        { label: 'SMA 20', data: [], borderColor: 'rgba(255, 193, 7, 1)', fill: false, tension: 0.2 },
+        { label: 'SMA 50', data: [], borderColor: 'rgba(13, 110, 253, 1)', fill: false, tension: 0.2 }
+      ]},
+      options: { responsive: true, scales: { x: { title: { display: true, text: 'Zeit' } }, y: { title: { display: true, text: 'Preis (USD)' } } } }
+    });
+
+    const ctx3 = document.getElementById('atrChart').getContext('2d');
+    atrChart = new Chart(ctx3, {
+      type: 'line',
+      data: { labels: [], datasets: [{
+        label: 'ATR 14',
+        data: [],
+        borderColor: 'rgba(220, 53, 69, 1)',
+        fill: false,
+        tension: 0.2,
+      }]},
+      options: { responsive: true, scales: { x: { title: { display: true, text: 'Zeit' } }, y: { title: { display: true, text: 'ATR' } } } }
+    });
+  }
+
+  // Charts mit gefilterten Daten aktualisieren
+  function updateCharts(minutes) {
+    const filtered = filterData(minutes);
+
+    const timestamps = filtered.map(d => d.timestamp);
+    const closePrices = filtered.map(d => d.close);
+    const sma20 = filtered.map(d => (typeof d.SMA_20 === 'string' ? null : d.SMA_20));
+    const sma50 = filtered.map(d => (typeof d.SMA_50 === 'string' ? null : d.SMA_50));
+    const atr14 = filtered.map(d => (typeof d.ATR === 'string' ? null : d.ATR));
+
+    // Bitcoin Chart updaten
+    bitcoinChart.data.labels = timestamps;
+    bitcoinChart.data.datasets[0].data = closePrices;
+    bitcoinChart.update();
+
+    // SMA Chart updaten
+    smaChart.data.labels = timestamps;
+    smaChart.data.datasets[0].data = sma20;
+    smaChart.data.datasets[1].data = sma50;
+    smaChart.update();
+
+    // ATR Chart updaten
+    atrChart.data.labels = timestamps;
+    atrChart.data.datasets[0].data = atr14;
+    atrChart.update();
+  }
+
+  // Eventlistener für Filter-Select
+  document.getElementById('timeRange').addEventListener('change', e => {
+    updateCharts(e.target.value);
+  });
+</script>
+
+<!-- Bootstrap Icons CDN für Info-Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
+</body>
+</html>
