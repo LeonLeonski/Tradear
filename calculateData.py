@@ -1,6 +1,8 @@
 import xml.etree.ElementTree as ET
 import pandas as pd
 import json
+import scipy.stats as stats
+
 
 # 1. XML-Datei einlesen und in eine Liste von Dicts umwandeln
 tree = ET.parse('bc_data.xml')
@@ -65,6 +67,29 @@ def calculate_avg_volume(df, period):
     df['Avg_Volume'] = df['volume'].rolling(window=period).mean()
     return df
 
+    # ... (nachdem der DataFrame df erstellt und alle anderen Kennzahlen berechnet wurden)
+
+def calculate_correlation_and_pvalue(df):
+    """
+    Berechnet die Pearson-Korrelation und den P-Wert zwischen Schlusskurs und Volumen.
+    """
+    # Sicherstellen, dass keine NaN-Werte in den für die Korrelation verwendeten Spalten sind
+    # (optional, aber gute Praxis)
+    df_clean = df.dropna(subset=['close', 'volume'])
+
+    if len(df_clean) > 1: # Mindestens zwei Datenpunkte für Korrelation nötig
+        correlation, p_value = stats.pearsonr(df_clean['close'], df_clean['volume'])
+        print(f"Pearson-Korrelation (Close vs. Volume): {correlation:.4f}")
+        print(f"P-Wert: {p_value:.4f}")
+        return correlation, p_value
+    else:
+        print("Nicht genug Datenpunkte für die Korrelationsberechnung.")
+        return None, None
+
+
+
+
+
 # 4. Alle Berechnungen ausführen
 df = calculate_basic_metrics(df)
 df = identify_doji(df)
@@ -72,6 +97,8 @@ df = calculate_atr(df)
 df = calculate_golden_cross_signal(df)
 df = calculate_volume_change(df)
 df = calculate_avg_volume(df, 20)
+# Aufruf der Funktion und Speichern der Ergebnisse
+correlation, p_value = calculate_correlation_and_pvalue(df)
 
 # 5. Ersetzen von NaN-Werten durch "Unzureichende Daten"
 df.fillna("Unzureichende Daten", inplace=True)
