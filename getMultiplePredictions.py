@@ -8,41 +8,25 @@ with open('calculated_bitcoin_data.json', 'r') as f:
     data = json.load(f)
 
 df = pd.DataFrame(data)
-
-# "Unzureichende Daten" durch np.nan ersetzen
 df.replace("Unzureichende Daten", np.nan, inplace=True)
 
 feature_cols = ['open', 'high', 'low', 'close', 'volume',
                 'SMA_20', 'SMA_50', 'ATR', 'Doji', 'Golden_Cross', 'Volume_Change', 'Avg_Volume']
-
-# Entferne Zeilen mit fehlenden Werten in Features
 df = df.dropna(subset=feature_cols)
-
-# Label erzeugen: prozentuale Kursänderung für nächste Periode
 df['close_next'] = df['close'].shift(-1)
 df['target'] = (df['close_next'] - df['close']) / df['close']
-
-# Letzte Zeile hat kein Label, deshalb entfernen
 df = df.dropna(subset=['target'])
-
-# Konvertiere boolsche Spalten zu int
 df['Doji'] = df['Doji'].astype(int)
 df['Golden_Cross'] = df['Golden_Cross'].astype(int)
 
 X = df[feature_cols]
 y = df['target']
 
-# Modell trainieren auf den gesamten Daten
 model = RandomForestRegressor(n_estimators=100, random_state=42)
 model.fit(X, y)
 
-# Mehrstufige Vorhersage iterativ für die nächsten 10 Zeitpunkte
 steps_ahead = 10
-
-# Letzten Zeitstempel auf volle Minute abrunden (wichtig)
 last_timestamp = pd.to_datetime(df.iloc[-1]['timestamp']).floor('min')
-
-# Start mit letztem bekannten Feature-Set
 last_features = X.iloc[-1].copy()
 future_predictions = []
 future_timestamps = []
@@ -62,17 +46,19 @@ for step in range(steps_ahead):
     new_features['close'] = predicted_close
     new_features['high'] = max(new_features['open'], predicted_close) * 1.001
     new_features['low'] = min(new_features['open'], predicted_close) * 0.999
-    new_features['volume'] = 0  # Platzhalter
+    new_features['volume'] = 0
 
     last_features = new_features
 
-# Historische Daten vorbereiten
 historical = df[['timestamp', 'close']].copy()
 
-# Zukunftsdaten vorbereiten (korrekte Länge!)
 future = pd.DataFrame({
     'timestamp': future_timestamps,
-    'predicted_close': [np.nan] * len(future_timestamps)
+    'predicted_close': [np.nan] * len(future_timestamps),
+    'trade_direction': [None] * len(future_timestamps),
+    'take_profit': [None] * len(future_timestamps),
+    'stop_loss': [None] * len(future_timestamps),
+    'top_trade': [False] * len(future_timestamps)
 })
 
 for i, p in enumerate(future_predictions):
@@ -81,25 +67,116 @@ for i, p in enumerate(future_predictions):
     else:
         future.loc[i, 'predicted_close'] = future.loc[i-1, 'predicted_close'] * (1 + p)
 
-# Kombiniere historische und prognostizierte Daten
-combined = []
+# SL/TP-Optimierung (24h zurück)
+recent = df.dropna(subset=["open", "high", "low", "close"]).copy()
+recent["timestamp"] = pd.to_datetime(recent["timestamp"])
+recent = recent.sort_values("timestamp").iloc[-1440:]
+recent["TR"] = recent.apply(lambda row: max(row["high"] - row["low"],
+                                             abs(row["high"] - row["close"]),
+                                             abs(row["low"] - row["close"])), axis=1)
+avg_atr = recent["TR"].mean()
 
+tp_options = [0.5, 1.0, 1.5, 2.0]
+sl_options = [0.5, 1.0, 1.5, 2.0]
+best_result = {"Win_Rate": -1}
+
+for tp in tp_options:
+    for sl in sl_options:
+        wins, losses = 0, 0
+        for i in range(len(recent) - 10):
+            entry = recent.iloc[i]
+            tp_price = entry["close"] + tp * avg_atr
+            sl_price = entry["close"] - sl * avg_atr
+            for j in range(1, 11):
+                next_candle = recent.iloc[i + j]
+                if next_candle["high"] >= tp_price:
+                    wins += 1
+                    break
+                elif next_candle["low"] <= sl_price:
+                    losses += 1
+                    break
+        total = wins + losses
+        win_rate = wins / total if total > 0 else 0
+        if win_rate > best_result["Win_Rate"]:
+            best_result = {
+                "TP_MULTIPLIER": tp,
+                "SL_MULTIPLIER": sl,
+                "Win_Rate": win_rate
+            }
+
+TP_MULTIPLIER = best_result["TP_MULTIPLIER"]
+SL_MULTIPLIER = best_result["SL_MULTIPLIER"]
+
+# Nur den besten Trade markieren
+lookahead = 10
+best_idx = None
+best_strength = -1
+
+for i, p in enumerate(future_predictions):
+    predicted_close = future.loc[i, 'predicted_close']
+    threshold = 0.01 * avg_atr / predicted_close
+
+    if abs(p) < threshold:
+        continue
+
+    direction = "long" if p > 0 else "short"
+    tp = predicted_close + TP_MULTIPLIER * avg_atr if direction == "long" else predicted_close - TP_MULTIPLIER * avg_atr
+    sl = predicted_close - SL_MULTIPLIER * avg_atr if direction == "long" else predicted_close + SL_MULTIPLIER * avg_atr
+
+    will_hit = False
+    for j in range(1, lookahead + 1):
+        if i + j < len(future):
+            test_price = future.loc[i + j, 'predicted_close']
+            if direction == "long" and (test_price >= tp or test_price <= sl):
+                will_hit = True
+                break
+            elif direction == "short" and (test_price <= tp or test_price >= sl):
+                will_hit = True
+                break
+
+    if will_hit:
+        strength = abs(tp - sl)
+        if strength > best_strength:
+            best_idx = i
+            best_strength = strength
+            best_values = {
+                "direction": direction,
+                "tp": tp,
+                "sl": sl
+            }
+
+# Nur für den besten Trade setzen
+if best_idx is not None:
+    future.loc[best_idx, 'trade_direction'] = best_values["direction"]
+    future.loc[best_idx, 'take_profit'] = best_values["tp"]
+    future.loc[best_idx, 'stop_loss'] = best_values["sl"]
+    future.loc[best_idx, 'top_trade'] = True
+
+# Kombinieren & Speichern
+combined = []
 for i, row in historical.iterrows():
     combined.append({
         'timestamp': row['timestamp'],
         'actual_close': row['close'],
-        'predicted_close': None
+        'predicted_close': None,
+        'take_profit': None,
+        'stop_loss': None,
+        'trade_direction': None,
+        'top_trade': False
     })
 
 for i, row in future.iterrows():
     combined.append({
         'timestamp': row['timestamp'],
         'actual_close': None,
-        'predicted_close': row['predicted_close']
+        'predicted_close': row['predicted_close'],
+        'take_profit': row['take_profit'],
+        'stop_loss': row['stop_loss'],
+        'trade_direction': row['trade_direction'],
+        'top_trade': row['top_trade']
     })
 
-# Speichere die kombinierten Daten in eine JSON-Datei
 with open('combined_predictions.json', 'w') as f:
     json.dump(combined, f, indent=2)
 
-print("Minütliche, mehrstufige Vorhersagen in 'combined_predictions.json' gespeichert.")
+print("Vorhersagen gespeichert. Top-Trade markiert.")

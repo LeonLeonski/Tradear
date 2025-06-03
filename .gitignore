@@ -1,0 +1,22 @@
+# Ignore data files
+*.xml
+*.json
+bc_data.xml
+calculated_bitcoin_data.json
+combinded_predictions.json
+
+# Ignore Python cache and environment files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Ignore VS Code settings
+.vscode/
