@@ -81,25 +81,84 @@ for i, p in enumerate(future_predictions):
     else:
         future.loc[i, 'predicted_close'] = future.loc[i-1, 'predicted_close'] * (1 + p)
 
-# Kombiniere historische und prognostizierte Daten
+# ATR-basiertes SL/TP-Backtesting auf den letzten 1440 Minuten
+
+# Bereinige ATR
+df["ATR"] = pd.to_numeric(df["ATR"], errors="coerce")
+
+# Letzte 1440 Minuten (24h)
+recent = df.dropna(subset=["open", "high", "low", "close"]).copy()
+recent["timestamp"] = pd.to_datetime(recent["timestamp"])
+recent = recent.sort_values("timestamp").iloc[-1440:]
+
+# Berechne durchschnittlichen True Range als Fallback falls ATR fehlt
+recent["TR"] = recent.apply(lambda row: max(row["high"] - row["low"],
+                                            abs(row["high"] - row["close"]),
+                                            abs(row["low"] - row["close"])), axis=1)
+avg_atr = recent["TR"].mean()
+
+tp_options = [0.5, 1.0, 1.5, 2.0]
+sl_options = [0.5, 1.0, 1.5, 2.0]
+
+best_result = {"Win_Rate": -1}
+for tp in tp_options:
+    for sl in sl_options:
+        wins, losses = 0, 0
+        for i in range(len(recent) - 10):
+            entry = recent.iloc[i]
+            tp_price = entry["close"] + tp * avg_atr
+            sl_price = entry["close"] - sl * avg_atr
+            for j in range(1, 11):
+                next_candle = recent.iloc[i + j]
+                if next_candle["high"] >= tp_price:
+                    wins += 1
+                    break
+                elif next_candle["low"] <= sl_price:
+                    losses += 1
+                    break
+        total = wins + losses
+        win_rate = wins / total if total > 0 else 0
+        if win_rate > best_result["Win_Rate"]:
+            best_result = {
+                "TP_MULTIPLIER": tp,
+                "SL_MULTIPLIER": sl,
+                "Win_Rate": win_rate
+            }
+
+# Optimal ermittelte Werte verwenden
+TP_MULTIPLIER = best_result["TP_MULTIPLIER"]
+SL_MULTIPLIER = best_result["SL_MULTIPLIER"]
+
+print(f"Optimale TP/SL-Multiplikatoren gewählt: TP={TP_MULTIPLIER}, SL={SL_MULTIPLIER}, Win-Rate={best_result['Win_Rate']:.2%}")
+
+
+# Take-Profit und Stop-Loss für jede Vorhersage berechnen
+future['take_profit'] = future['predicted_close'] + TP_MULTIPLIER * avg_atr
+future['stop_loss'] = future['predicted_close'] - SL_MULTIPLIER * avg_atr
+
+# Kombiniere historische und prognostizierte Daten (inkl. Take-Profit/Stop-Loss)
 combined = []
 
 for i, row in historical.iterrows():
     combined.append({
         'timestamp': row['timestamp'],
         'actual_close': row['close'],
-        'predicted_close': None
+        'predicted_close': None,
+        'take_profit': None,
+        'stop_loss': None
     })
 
 for i, row in future.iterrows():
     combined.append({
         'timestamp': row['timestamp'],
         'actual_close': None,
-        'predicted_close': row['predicted_close']
+        'predicted_close': row['predicted_close'],
+        'take_profit': row['take_profit'],
+        'stop_loss': row['stop_loss']
     })
 
 # Speichere die kombinierten Daten in eine JSON-Datei
 with open('combined_predictions.json', 'w') as f:
     json.dump(combined, f, indent=2)
 
-print("Minütliche, mehrstufige Vorhersagen in 'combined_predictions.json' gespeichert.")
+print("Minütliche, mehrstufige Vorhersagen mit Take-Profit/Stop-Loss in 'combined_predictions.json' gespeichert.")

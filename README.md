@@ -15,4 +15,5 @@ python -m pip install -r requirements.txt
 python getData.py                   # ➜ bc_data.xml
 python calculateData.py             # ➜ calculated_bitcoin_data.json
 python getMultiplePredictions.py    # ➜ combined_predictions.json
+
 ```

@@ -96,6 +96,49 @@
         .filter(d => d.predicted_close !== null)
         .map(d => ({ x: new Date(d.timestamp), y: +d.predicted_close }));
 
+      // Take-Profit- und Stop-Loss-Daten für Vorhersagepunkte
+      const takeProfitData = fullData
+        .filter(d => d.take_profit !== null)
+        .map(d => ({ x: new Date(d.timestamp), y: +d.take_profit }));
+
+      const stopLossData = fullData
+        .filter(d => d.stop_loss !== null)
+        .map(d => ({ x: new Date(d.timestamp), y: +d.stop_loss }));
+
+      // Finde den ersten Vorhersagepunkt
+      const firstPrediction = fullData.find(d => d.predicted_close !== null);
+
+      // Falls vorhanden, berechne Take-Profit und Stop-Loss für den Trade-Einstieg
+      let tradeTakeProfit = null;
+      let tradeStopLoss = null;
+      let tradeStartTime = null;
+      let tradeEndTime = null;
+
+      if (firstPrediction) {
+        tradeTakeProfit = firstPrediction.take_profit;
+        tradeStopLoss = firstPrediction.stop_loss;
+        tradeStartTime = new Date(firstPrediction.timestamp);
+
+        // Optional: Trade-Ende als letztes Vorhersagedatum
+        const lastPrediction = [...fullData].reverse().find(d => d.predicted_close !== null);
+        tradeEndTime = lastPrediction ? new Date(lastPrediction.timestamp) : tradeStartTime;
+      }
+
+      // Erzeuge waagerechte Linien für Take-Profit und Stop-Loss
+      const takeProfitLine = (tradeTakeProfit !== null && tradeEndTime)
+        ? [
+            { x: tradeStartTime, y: tradeTakeProfit },
+            { x: tradeEndTime, y: tradeTakeProfit }
+          ]
+        : [];
+
+      const stopLossLine = (tradeStopLoss !== null && tradeEndTime)
+        ? [
+            { x: tradeStartTime, y: tradeStopLoss },
+            { x: tradeEndTime, y: tradeStopLoss }
+          ]
+        : [];
+
       // Chart initialisieren
       const ctx = document.getElementById('combinedChart').getContext('2d');
       combinedChart = new Chart(ctx, {
@@ -117,6 +160,26 @@
               borderDash: [10, 5],
               fill: false,
               tension: 0.2,
+              spanGaps: true,
+            },
+            {
+              label: 'Take-Profit',
+              data: takeProfitLine,
+              borderColor: 'rgba(54, 162, 235, 0.8)',
+              borderDash: [2, 2],
+              fill: false,
+              pointRadius: 0,
+              tension: 0,
+              spanGaps: true,
+            },
+            {
+              label: 'Stop-Loss',
+              data: stopLossLine,
+              borderColor: 'rgba(255, 206, 86, 0.8)',
+              borderDash: [2, 2],
+              fill: false,
+              pointRadius: 0,
+              tension: 0,
               spanGaps: true,
             }
           ]
