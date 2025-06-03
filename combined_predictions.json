@@ -1,54 +1,5 @@
 [
   {
-    "timestamp": "2025-06-02 21:10:00",
-    "actual_close": 104401.5,
-    "predicted_close": null,
-    "take_profit": null,
-    "stop_loss": null
-  },
-  {
-    "timestamp": "2025-06-02 21:11:00",
-    "actual_close": 104333.39,
-    "predicted_close": null,
-    "take_profit": null,
-    "stop_loss": null
-  },
-  {
-    "timestamp": "2025-06-02 21:12:00",
-    "actual_close": 104261.51,
-    "predicted_close": null,
-    "take_profit": null,
-    "stop_loss": null
-  },
-  {
-    "timestamp": "2025-06-02 21:13:00",
-    "actual_close": 104259.16,
-    "predicted_close": null,
-    "take_profit": null,
-    "stop_loss": null
-  },
-  {
-    "timestamp": "2025-06-02 21:14:00",
-    "actual_close": 104254.27,
-    "predicted_close": null,
-    "take_profit": null,
-    "stop_loss": null
-  },
-  {
-    "timestamp": "2025-06-02 21:15:00",
-    "actual_close": 104248.37,
-    "predicted_close": null,
-    "take_profit": null,
-    "stop_loss": null
-  },
-  {
-    "timestamp": "2025-06-02 21:16:00",
-    "actual_close": 104277.31,
-    "predicted_close": null,
-    "take_profit": null,
-    "stop_loss": null
-  },
-  {
     "timestamp": "2025-06-02 21:17:00",
     "actual_close": 104280.22,
     "predicted_close": null,
@@ -6651,72 +6602,121 @@
   },
   {
     "timestamp": "2025-06-03 13:00:00",
-    "actual_close": null,
-    "predicted_close": 105280.08741148298,
-    "take_profit": 105297.95907990403,
-    "stop_loss": 105208.60073779877
+    "actual_close": 105304.33,
+    "predicted_close": null,
+    "take_profit": null,
+    "stop_loss": null
   },
   {
     "timestamp": "2025-06-03 13:01:00",
-    "actual_close": null,
-    "predicted_close": 105279.06942962867,
-    "take_profit": 105296.94109804972,
-    "stop_loss": 105207.58275594446
+    "actual_close": 105323.69,
+    "predicted_close": null,
+    "take_profit": null,
+    "stop_loss": null
   },
   {
     "timestamp": "2025-06-03 13:02:00",
-    "actual_close": null,
-    "predicted_close": 105277.33077870504,
-    "take_profit": 105295.2024471261,
-    "stop_loss": 105205.84410502083
+    "actual_close": 105325.91,
+    "predicted_close": null,
+    "take_profit": null,
+    "stop_loss": null
   },
   {
     "timestamp": "2025-06-03 13:03:00",
-    "actual_close": null,
-    "predicted_close": 105275.34794630519,
-    "take_profit": 105293.21961472624,
-    "stop_loss": 105203.86127262098
+    "actual_close": 105349.93,
+    "predicted_close": null,
+    "take_profit": null,
+    "stop_loss": null
   },
   {
     "timestamp": "2025-06-03 13:04:00",
-    "actual_close": null,
-    "predicted_close": 105273.50652833228,
-    "take_profit": 105291.37819675333,
-    "stop_loss": 105202.01985464807
+    "actual_close": 105343.36,
+    "predicted_close": null,
+    "take_profit": null,
+    "stop_loss": null
   },
   {
     "timestamp": "2025-06-03 13:05:00",
-    "actual_close": null,
-    "predicted_close": 105272.26202560819,
-    "take_profit": 105290.13369402924,
-    "stop_loss": 105200.77535192398
+    "actual_close": 105343.37,
+    "predicted_close": null,
+    "take_profit": null,
+    "stop_loss": null
   },
   {
     "timestamp": "2025-06-03 13:06:00",
-    "actual_close": null,
-    "predicted_close": 105271.01716964577,
-    "take_profit": 105288.88883806682,
-    "stop_loss": 105199.53049596156
+    "actual_close": 105311.01,
+    "predicted_close": null,
+    "take_profit": null,
+    "stop_loss": null
   },
   {
     "timestamp": "2025-06-03 13:07:00",
     "actual_close": null,
-    "predicted_close": 105273.85756601392,
-    "take_profit": 105291.72923443497,
-    "stop_loss": 105202.37089232971
+    "predicted_close": 105308.93616766899,
+    "take_profit": 105326.74989398477,
+    "stop_loss": 105237.68126240584
   },
   {
     "timestamp": "2025-06-03 13:08:00",
     "actual_close": null,
-    "predicted_close": 105272.61269118405,
-    "take_profit": 105290.4843596051,
-    "stop_loss": 105201.12601749985
+    "predicted_close": 105301.18118188909,
+    "take_profit": 105318.99490820487,
+    "stop_loss": 105229.92627662593
   },
   {
     "timestamp": "2025-06-03 13:09:00",
     "actual_close": null,
-    "predicted_close": 105271.36819902658,
-    "take_profit": 105289.23986744763,
-    "stop_loss": 105199.88152534237
+    "predicted_close": 105292.6036681851,
+    "take_profit": 105310.41739450088,
+    "stop_loss": 105221.34876292195
+  },
+  {
+    "timestamp": "2025-06-03 13:10:00",
+    "actual_close": null,
+    "predicted_close": 105284.28947450704,
+    "take_profit": 105302.10320082282,
+    "stop_loss": 105213.03456924389
+  },
+  {
+    "timestamp": "2025-06-03 13:11:00",
+    "actual_close": null,
+    "predicted_close": 105275.95817586864,
+    "take_profit": 105293.77190218442,
+    "stop_loss": 105204.70327060549
+  },
+  {
+    "timestamp": "2025-06-03 13:12:00",
+    "actual_close": null,
+    "predicted_close": 105267.64484485562,
+    "take_profit": 105285.4585711714,
+    "stop_loss": 105196.38993959247
+  },
+  {
+    "timestamp": "2025-06-03 13:13:00",
+    "actual_close": null,
+    "predicted_close": 105259.13857778699,
+    "take_profit": 105276.95230410277,
+    "stop_loss": 105187.88367252384
+  },
+  {
+    "timestamp": "2025-06-03 13:14:00",
+    "actual_close": null,
+    "predicted_close": 105252.60705980049,
+    "take_profit": 105270.42078611627,
+    "stop_loss": 105181.35215453734
+  },
+  {
+    "timestamp": "2025-06-03 13:15:00",
+    "actual_close": null,
+    "predicted_close": 105247.81436285489,
+    "take_profit": 105265.62808917067,
+    "stop_loss": 105176.55945759173
+  },
+  {
+    "timestamp": "2025-06-03 13:16:00",
+    "actual_close": null,
+    "predicted_close": 105243.58085081111,
+    "take_profit": 105261.39457712689,
+    "stop_loss": 105172.32594554796
   }
 ]

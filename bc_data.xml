@@ -1,62 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <BitcoinData>
   <Entry>
-    <Timestamp>2025-06-02 20:21:00</Timestamp>
-    <Open>104490.34000000</Open>
-    <High>104525.70000000</High>
-    <Low>104490.34000000</Low>
-    <Close>104508.24000000</Close>
-    <Volume>9.44727000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 20:22:00</Timestamp>
-    <Open>104508.24000000</Open>
-    <High>104610.23000000</High>
-    <Low>104508.23000000</Low>
-    <Close>104596.02000000</Close>
-    <Volume>14.90823000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 20:23:00</Timestamp>
-    <Open>104596.01000000</Open>
-    <High>104606.48000000</High>
-    <Low>104571.76000000</Low>
-    <Close>104571.77000000</Close>
-    <Volume>3.88709000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 20:24:00</Timestamp>
-    <Open>104571.76000000</Open>
-    <High>104606.51000000</High>
-    <Low>104571.76000000</Low>
-    <Close>104606.50000000</Close>
-    <Volume>2.73736000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 20:25:00</Timestamp>
-    <Open>104606.51000000</Open>
-    <High>104639.90000000</High>
-    <Low>104606.50000000</Low>
-    <Close>104639.89000000</Close>
-    <Volume>9.96470000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 20:26:00</Timestamp>
-    <Open>104639.89000000</Open>
-    <High>104731.95000000</High>
-    <Low>104635.73000000</Low>
-    <Close>104714.28000000</Close>
-    <Volume>25.80026000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 20:27:00</Timestamp>
-    <Open>104714.28000000</Open>
-    <High>104714.29000000</High>
-    <Low>104626.25000000</Low>
-    <Close>104632.07000000</Close>
-    <Volume>7.14581000</Volume>
-  </Entry>
-  <Entry>
     <Timestamp>2025-06-02 20:28:00</Timestamp>
     <Open>104632.08000000</Open>
     <High>104679.25000000</High>
@@ -7994,10 +7938,66 @@
   </Entry>
   <Entry>
     <Timestamp>2025-06-03 13:00:00</Timestamp>
-    <Open>105280.99000000</Open>
-    <High>105280.99000000</High>
-    <Low>105280.99000000</Low>
-    <Close>105280.99000000</Close>
-    <Volume>0.00000000</Volume>
+    <Open>105281.00000000</Open>
+    <High>105328.99000000</High>
+    <Low>105281.00000000</Low>
+    <Close>105304.33000000</Close>
+    <Volume>5.29108000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 13:01:00</Timestamp>
+    <Open>105304.34000000</Open>
+    <High>105323.69000000</High>
+    <Low>105292.40000000</Low>
+    <Close>105323.69000000</Close>
+    <Volume>2.22715000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 13:02:00</Timestamp>
+    <Open>105323.69000000</Open>
+    <High>105339.58000000</High>
+    <Low>105323.69000000</Low>
+    <Close>105325.91000000</Close>
+    <Volume>5.50422000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 13:03:00</Timestamp>
+    <Open>105325.91000000</Open>
+    <High>105349.94000000</High>
+    <Low>105325.90000000</Low>
+    <Close>105349.93000000</Close>
+    <Volume>6.18886000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 13:04:00</Timestamp>
+    <Open>105349.94000000</Open>
+    <High>105349.94000000</High>
+    <Low>105343.36000000</Low>
+    <Close>105343.36000000</Close>
+    <Volume>5.35593000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 13:05:00</Timestamp>
+    <Open>105343.37000000</Open>
+    <High>105343.37000000</High>
+    <Low>105343.36000000</Low>
+    <Close>105343.37000000</Close>
+    <Volume>1.32025000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 13:06:00</Timestamp>
+    <Open>105343.36000000</Open>
+    <High>105343.37000000</High>
+    <Low>105311.00000000</Low>
+    <Close>105311.01000000</Close>
+    <Volume>4.29207000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 13:07:00</Timestamp>
+    <Open>105311.00000000</Open>
+    <High>105311.01000000</High>
+    <Low>105311.00000000</Low>
+    <Close>105311.00000000</Close>
+    <Volume>2.60586000</Volume>
   </Entry>
 </BitcoinData>
