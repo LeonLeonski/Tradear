@@ -1,446 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <BitcoinData>
   <Entry>
-    <Timestamp>2025-06-02 21:18:00</Timestamp>
-    <Open>104280.22000000</Open>
-    <High>104311.99000000</High>
-    <Low>104280.22000000</Low>
-    <Close>104311.98000000</Close>
-    <Volume>1.76540000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 21:19:00</Timestamp>
-    <Open>104311.98000000</Open>
-    <High>104331.88000000</High>
-    <Low>104311.98000000</Low>
-    <Close>104320.24000000</Close>
-    <Volume>2.17166000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 21:20:00</Timestamp>
-    <Open>104320.25000000</Open>
-    <High>104379.98000000</High>
-    <Low>104320.25000000</Low>
-    <Close>104371.83000000</Close>
-    <Volume>3.03213000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 21:21:00</Timestamp>
-    <Open>104371.82000000</Open>
-    <High>104380.92000000</High>
-    <Low>104355.78000000</Low>
-    <Close>104380.91000000</Close>
-    <Volume>12.55022000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 21:22:00</Timestamp>
-    <Open>104380.92000000</Open>
-    <High>104394.21000000</High>
-    <Low>104380.09000000</Low>
-    <Close>104394.20000000</Close>
-    <Volume>2.56562000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 21:23:00</Timestamp>
-    <Open>104394.20000000</Open>
-    <High>104396.23000000</High>
-    <Low>104388.21000000</Low>
-    <Close>104396.22000000</Close>
-    <Volume>4.29569000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 21:24:00</Timestamp>
-    <Open>104396.22000000</Open>
-    <High>104471.49000000</High>
-    <Low>104396.22000000</Low>
-    <Close>104454.13000000</Close>
-    <Volume>6.40258000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 21:25:00</Timestamp>
-    <Open>104454.13000000</Open>
-    <High>104455.40000000</High>
-    <Low>104448.91000000</Low>
-    <Close>104455.39000000</Close>
-    <Volume>2.08385000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 21:26:00</Timestamp>
-    <Open>104455.39000000</Open>
-    <High>104474.89000000</High>
-    <Low>104455.39000000</Low>
-    <Close>104463.14000000</Close>
-    <Volume>1.44844000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 21:27:00</Timestamp>
-    <Open>104463.14000000</Open>
-    <High>104463.15000000</High>
-    <Low>104380.92000000</Low>
-    <Close>104387.76000000</Close>
-    <Volume>10.38503000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 21:28:00</Timestamp>
-    <Open>104387.75000000</Open>
-    <High>104406.57000000</High>
-    <Low>104380.92000000</Low>
-    <Close>104380.92000000</Close>
-    <Volume>2.48385000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 21:29:00</Timestamp>
-    <Open>104380.93000000</Open>
-    <High>104401.49000000</High>
-    <Low>104380.93000000</Low>
-    <Close>104393.94000000</Close>
-    <Volume>1.68702000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 21:30:00</Timestamp>
-    <Open>104393.94000000</Open>
-    <High>104396.23000000</High>
-    <Low>104364.42000000</Low>
-    <Close>104364.42000000</Close>
-    <Volume>3.16534000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 21:31:00</Timestamp>
-    <Open>104364.42000000</Open>
-    <High>104364.43000000</High>
-    <Low>104324.71000000</Low>
-    <Close>104324.71000000</Close>
-    <Volume>3.94699000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 21:32:00</Timestamp>
-    <Open>104324.72000000</Open>
-    <High>104324.72000000</High>
-    <Low>104254.71000000</Low>
-    <Close>104269.31000000</Close>
-    <Volume>4.41198000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 21:33:00</Timestamp>
-    <Open>104269.31000000</Open>
-    <High>104269.31000000</High>
-    <Low>104240.00000000</Low>
-    <Close>104254.71000000</Close>
-    <Volume>3.20970000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 21:34:00</Timestamp>
-    <Open>104254.71000000</Open>
-    <High>104260.00000000</High>
-    <Low>104234.30000000</Low>
-    <Close>104234.30000000</Close>
-    <Volume>2.77679000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 21:35:00</Timestamp>
-    <Open>104234.30000000</Open>
-    <High>104254.72000000</High>
-    <Low>104234.30000000</Low>
-    <Close>104254.71000000</Close>
-    <Volume>3.59562000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 21:36:00</Timestamp>
-    <Open>104254.72000000</Open>
-    <High>104279.61000000</High>
-    <Low>104254.71000000</Low>
-    <Close>104279.61000000</Close>
-    <Volume>2.44194000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 21:37:00</Timestamp>
-    <Open>104279.60000000</Open>
-    <High>104285.72000000</High>
-    <Low>104267.83000000</Low>
-    <Close>104285.71000000</Close>
-    <Volume>3.25545000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 21:38:00</Timestamp>
-    <Open>104285.72000000</Open>
-    <High>104285.72000000</High>
-    <Low>104266.23000000</Low>
-    <Close>104266.23000000</Close>
-    <Volume>2.15929000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 21:39:00</Timestamp>
-    <Open>104266.23000000</Open>
-    <High>104285.31000000</High>
-    <Low>104255.89000000</Low>
-    <Close>104255.89000000</Close>
-    <Volume>5.22231000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 21:40:00</Timestamp>
-    <Open>104255.89000000</Open>
-    <High>104255.90000000</High>
-    <Low>104190.47000000</Low>
-    <Close>104199.98000000</Close>
-    <Volume>13.83680000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 21:41:00</Timestamp>
-    <Open>104199.99000000</Open>
-    <High>104199.99000000</High>
-    <Low>104053.40000000</Low>
-    <Close>104071.24000000</Close>
-    <Volume>30.70436000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 21:42:00</Timestamp>
-    <Open>104071.24000000</Open>
-    <High>104096.99000000</High>
-    <Low>104063.08000000</Low>
-    <Close>104096.98000000</Close>
-    <Volume>13.61764000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 21:43:00</Timestamp>
-    <Open>104096.99000000</Open>
-    <High>104130.76000000</High>
-    <Low>104096.99000000</Low>
-    <Close>104119.43000000</Close>
-    <Volume>5.86709000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 21:44:00</Timestamp>
-    <Open>104119.43000000</Open>
-    <High>104122.37000000</High>
-    <Low>104109.12000000</Low>
-    <Close>104122.36000000</Close>
-    <Volume>1.99555000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 21:45:00</Timestamp>
-    <Open>104122.37000000</Open>
-    <High>104122.37000000</High>
-    <Low>104089.54000000</Low>
-    <Close>104089.55000000</Close>
-    <Volume>2.20893000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 21:46:00</Timestamp>
-    <Open>104089.55000000</Open>
-    <High>104142.33000000</High>
-    <Low>104050.96000000</Low>
-    <Close>104115.15000000</Close>
-    <Volume>12.51223000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 21:47:00</Timestamp>
-    <Open>104115.15000000</Open>
-    <High>104165.09000000</High>
-    <Low>104115.14000000</Low>
-    <Close>104160.37000000</Close>
-    <Volume>2.17706000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 21:48:00</Timestamp>
-    <Open>104160.38000000</Open>
-    <High>104172.00000000</High>
-    <Low>104157.59000000</Low>
-    <Close>104157.60000000</Close>
-    <Volume>2.47637000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 21:49:00</Timestamp>
-    <Open>104157.59000000</Open>
-    <High>104250.14000000</High>
-    <Low>104157.59000000</Low>
-    <Close>104250.14000000</Close>
-    <Volume>12.36743000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 21:50:00</Timestamp>
-    <Open>104250.14000000</Open>
-    <High>104368.00000000</High>
-    <Low>104250.14000000</Low>
-    <Close>104342.94000000</Close>
-    <Volume>22.70293000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 21:51:00</Timestamp>
-    <Open>104342.95000000</Open>
-    <High>104380.96000000</High>
-    <Low>104337.41000000</Low>
-    <Close>104380.96000000</Close>
-    <Volume>8.87785000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 21:52:00</Timestamp>
-    <Open>104380.95000000</Open>
-    <High>104380.96000000</High>
-    <Low>104360.36000000</Low>
-    <Close>104365.92000000</Close>
-    <Volume>8.22937000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 21:53:00</Timestamp>
-    <Open>104365.93000000</Open>
-    <High>104380.01000000</High>
-    <Low>104365.92000000</Low>
-    <Close>104380.00000000</Close>
-    <Volume>1.67078000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 21:54:00</Timestamp>
-    <Open>104380.00000000</Open>
-    <High>104396.23000000</High>
-    <Low>104360.49000000</Low>
-    <Close>104396.22000000</Close>
-    <Volume>4.70980000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 21:55:00</Timestamp>
-    <Open>104396.23000000</Open>
-    <High>104422.81000000</High>
-    <Low>104396.23000000</Low>
-    <Close>104422.81000000</Close>
-    <Volume>2.62651000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 21:56:00</Timestamp>
-    <Open>104422.80000000</Open>
-    <High>104422.81000000</High>
-    <Low>104406.77000000</Low>
-    <Close>104419.81000000</Close>
-    <Volume>3.22544000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 21:57:00</Timestamp>
-    <Open>104420.15000000</Open>
-    <High>104450.07000000</High>
-    <Low>104420.15000000</Low>
-    <Close>104434.56000000</Close>
-    <Volume>8.89327000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 21:58:00</Timestamp>
-    <Open>104434.55000000</Open>
-    <High>104458.28000000</High>
-    <Low>104412.37000000</Low>
-    <Close>104458.27000000</Close>
-    <Volume>5.57954000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 21:59:00</Timestamp>
-    <Open>104458.27000000</Open>
-    <High>104458.28000000</High>
-    <Low>104399.44000000</Low>
-    <Close>104425.63000000</Close>
-    <Volume>12.79954000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 22:00:00</Timestamp>
-    <Open>104425.64000000</Open>
-    <High>104487.90000000</High>
-    <Low>104425.64000000</Low>
-    <Close>104487.90000000</Close>
-    <Volume>9.69336000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 22:01:00</Timestamp>
-    <Open>104487.90000000</Open>
-    <High>104498.78000000</High>
-    <Low>104476.19000000</Low>
-    <Close>104488.77000000</Close>
-    <Volume>4.58960000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 22:02:00</Timestamp>
-    <Open>104488.78000000</Open>
-    <High>104488.78000000</High>
-    <Low>104472.76000000</Low>
-    <Close>104472.77000000</Close>
-    <Volume>1.73198000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 22:03:00</Timestamp>
-    <Open>104472.76000000</Open>
-    <High>104498.80000000</High>
-    <Low>104452.17000000</Low>
-    <Close>104452.17000000</Close>
-    <Volume>4.18585000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 22:04:00</Timestamp>
-    <Open>104452.17000000</Open>
-    <High>104518.53000000</High>
-    <Low>104452.17000000</Low>
-    <Close>104518.52000000</Close>
-    <Volume>2.79301000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 22:05:00</Timestamp>
-    <Open>104518.53000000</Open>
-    <High>104518.53000000</High>
-    <Low>104480.64000000</Low>
-    <Close>104480.64000000</Close>
-    <Volume>1.56925000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 22:06:00</Timestamp>
-    <Open>104480.65000000</Open>
-    <High>104570.58000000</High>
-    <Low>104480.64000000</Low>
-    <Close>104570.58000000</Close>
-    <Volume>5.55039000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 22:07:00</Timestamp>
-    <Open>104570.58000000</Open>
-    <High>104653.39000000</High>
-    <Low>104570.57000000</Low>
-    <Close>104653.39000000</Close>
-    <Volume>5.83250000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 22:08:00</Timestamp>
-    <Open>104653.39000000</Open>
-    <High>104675.44000000</High>
-    <Low>104639.26000000</Low>
-    <Close>104653.78000000</Close>
-    <Volume>10.30996000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 22:09:00</Timestamp>
-    <Open>104653.77000000</Open>
-    <High>104726.42000000</High>
-    <Low>104653.77000000</Low>
-    <Close>104726.42000000</Close>
-    <Volume>6.61052000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 22:10:00</Timestamp>
-    <Open>104726.41000000</Open>
-    <High>104833.51000000</High>
-    <Low>104676.91000000</Low>
-    <Close>104798.24000000</Close>
-    <Volume>29.52017000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 22:11:00</Timestamp>
-    <Open>104798.24000000</Open>
-    <High>104829.71000000</High>
-    <Low>104785.38000000</Low>
-    <Close>104829.71000000</Close>
-    <Volume>8.74833000</Volume>
-  </Entry>
-  <Entry>
-    <Timestamp>2025-06-02 22:12:00</Timestamp>
-    <Open>104829.70000000</Open>
-    <High>104900.00000000</High>
-    <Low>104818.23000000</Low>
-    <Close>104895.92000000</Close>
-    <Volume>26.07500000</Volume>
-  </Entry>
-  <Entry>
     <Timestamp>2025-06-02 22:13:00</Timestamp>
     <Open>104895.91000000</Open>
     <High>104929.07000000</High>
@@ -7997,7 +7557,447 @@
     <Open>105243.00000000</Open>
     <High>105270.87000000</High>
     <Low>105242.99000000</Low>
-    <Close>105270.87000000</Close>
-    <Volume>6.66608000</Volume>
+    <Close>105270.86000000</Close>
+    <Volume>6.67141000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 13:58:00</Timestamp>
+    <Open>105270.87000000</Open>
+    <High>105282.59000000</High>
+    <Low>105270.86000000</Low>
+    <Close>105282.59000000</Close>
+    <Volume>3.47005000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 13:59:00</Timestamp>
+    <Open>105282.58000000</Open>
+    <High>105311.76000000</High>
+    <Low>105282.58000000</Low>
+    <Close>105287.24000000</Close>
+    <Volume>11.26080000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:00:00</Timestamp>
+    <Open>105287.24000000</Open>
+    <High>105311.80000000</High>
+    <Low>105262.13000000</Low>
+    <Close>105272.84000000</Close>
+    <Volume>11.09127000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:01:00</Timestamp>
+    <Open>105272.85000000</Open>
+    <High>105305.66000000</High>
+    <Low>105272.84000000</Low>
+    <Close>105305.65000000</Close>
+    <Volume>3.75380000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:02:00</Timestamp>
+    <Open>105305.66000000</Open>
+    <High>105329.33000000</High>
+    <Low>105290.37000000</Low>
+    <Close>105329.32000000</Close>
+    <Volume>9.11792000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:03:00</Timestamp>
+    <Open>105329.33000000</Open>
+    <High>105358.96000000</High>
+    <Low>105320.58000000</Low>
+    <Close>105320.59000000</Close>
+    <Volume>8.54105000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:04:00</Timestamp>
+    <Open>105320.59000000</Open>
+    <High>105320.59000000</High>
+    <Low>105298.61000000</Low>
+    <Close>105298.62000000</Close>
+    <Volume>4.88049000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:05:00</Timestamp>
+    <Open>105298.61000000</Open>
+    <High>105298.61000000</High>
+    <Low>105224.25000000</Low>
+    <Close>105224.26000000</Close>
+    <Volume>8.35698000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:06:00</Timestamp>
+    <Open>105224.25000000</Open>
+    <High>105232.66000000</High>
+    <Low>105224.25000000</Low>
+    <Close>105232.65000000</Close>
+    <Volume>9.80033000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:07:00</Timestamp>
+    <Open>105232.65000000</Open>
+    <High>105232.66000000</High>
+    <Low>105232.65000000</Low>
+    <Close>105232.66000000</Close>
+    <Volume>1.07784000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:08:00</Timestamp>
+    <Open>105232.65000000</Open>
+    <High>105260.06000000</High>
+    <Low>105232.65000000</Low>
+    <Close>105255.39000000</Close>
+    <Volume>6.44191000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:09:00</Timestamp>
+    <Open>105255.39000000</Open>
+    <High>105255.40000000</High>
+    <Low>105248.87000000</Low>
+    <Close>105248.87000000</Close>
+    <Volume>1.39149000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:10:00</Timestamp>
+    <Open>105248.88000000</Open>
+    <High>105275.40000000</High>
+    <Low>105248.87000000</Low>
+    <Close>105275.40000000</Close>
+    <Volume>7.74198000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:11:00</Timestamp>
+    <Open>105275.40000000</Open>
+    <High>105285.70000000</High>
+    <Low>105275.39000000</Low>
+    <Close>105285.69000000</Close>
+    <Volume>3.26800000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:12:00</Timestamp>
+    <Open>105285.69000000</Open>
+    <High>105285.70000000</High>
+    <Low>105285.69000000</Low>
+    <Close>105285.69000000</Close>
+    <Volume>2.02431000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:13:00</Timestamp>
+    <Open>105285.69000000</Open>
+    <High>105292.46000000</High>
+    <Low>105285.69000000</Low>
+    <Close>105292.45000000</Close>
+    <Volume>2.96986000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:14:00</Timestamp>
+    <Open>105292.45000000</Open>
+    <High>105360.00000000</High>
+    <Low>105292.45000000</Low>
+    <Close>105360.00000000</Close>
+    <Volume>13.94760000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:15:00</Timestamp>
+    <Open>105360.00000000</Open>
+    <High>105425.38000000</High>
+    <Low>105360.00000000</Low>
+    <Close>105392.47000000</Close>
+    <Volume>23.61973000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:16:00</Timestamp>
+    <Open>105392.46000000</Open>
+    <High>105392.47000000</High>
+    <Low>105377.81000000</Low>
+    <Close>105377.82000000</Close>
+    <Volume>6.88237000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:17:00</Timestamp>
+    <Open>105377.81000000</Open>
+    <High>105377.82000000</High>
+    <Low>105377.81000000</Low>
+    <Close>105377.81000000</Close>
+    <Volume>1.50334000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:18:00</Timestamp>
+    <Open>105377.81000000</Open>
+    <High>105390.20000000</High>
+    <Low>105377.81000000</Low>
+    <Close>105377.82000000</Close>
+    <Volume>7.29203000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:19:00</Timestamp>
+    <Open>105377.83000000</Open>
+    <High>105377.83000000</High>
+    <Low>105340.64000000</Low>
+    <Close>105352.04000000</Close>
+    <Volume>10.67915000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:20:00</Timestamp>
+    <Open>105352.05000000</Open>
+    <High>105374.69000000</High>
+    <Low>105352.04000000</Low>
+    <Close>105374.68000000</Close>
+    <Volume>5.58546000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:21:00</Timestamp>
+    <Open>105374.68000000</Open>
+    <High>105374.69000000</High>
+    <Low>105360.38000000</Low>
+    <Close>105360.38000000</Close>
+    <Volume>1.64020000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:22:00</Timestamp>
+    <Open>105360.38000000</Open>
+    <High>105360.39000000</High>
+    <Low>105297.68000000</Low>
+    <Close>105305.64000000</Close>
+    <Volume>6.43434000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:23:00</Timestamp>
+    <Open>105305.64000000</Open>
+    <High>105336.34000000</High>
+    <Low>105304.44000000</Low>
+    <Close>105336.33000000</Close>
+    <Volume>9.07954000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:24:00</Timestamp>
+    <Open>105336.34000000</Open>
+    <High>105375.54000000</High>
+    <Low>105336.33000000</Low>
+    <Close>105375.53000000</Close>
+    <Volume>3.80143000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:25:00</Timestamp>
+    <Open>105375.53000000</Open>
+    <High>105384.60000000</High>
+    <Low>105375.53000000</Low>
+    <Close>105384.59000000</Close>
+    <Volume>5.22639000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:26:00</Timestamp>
+    <Open>105384.60000000</Open>
+    <High>105387.97000000</High>
+    <Low>105372.56000000</Low>
+    <Close>105387.97000000</Close>
+    <Volume>45.35827000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:27:00</Timestamp>
+    <Open>105387.96000000</Open>
+    <High>105390.20000000</High>
+    <Low>105387.96000000</Low>
+    <Close>105390.20000000</Close>
+    <Volume>10.04394000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:28:00</Timestamp>
+    <Open>105390.19000000</Open>
+    <High>105390.19000000</High>
+    <Low>105363.83000000</Low>
+    <Close>105378.97000000</Close>
+    <Volume>8.58189000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:29:00</Timestamp>
+    <Open>105378.97000000</Open>
+    <High>105378.97000000</High>
+    <Low>105363.96000000</Low>
+    <Close>105363.96000000</Close>
+    <Volume>4.67885000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:30:00</Timestamp>
+    <Open>105363.97000000</Open>
+    <High>105363.97000000</High>
+    <Low>105340.85000000</Low>
+    <Close>105340.85000000</Close>
+    <Volume>4.16788000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:31:00</Timestamp>
+    <Open>105340.85000000</Open>
+    <High>105340.86000000</High>
+    <Low>105318.39000000</Low>
+    <Close>105318.39000000</Close>
+    <Volume>2.29533000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:32:00</Timestamp>
+    <Open>105318.40000000</Open>
+    <High>105318.40000000</High>
+    <Low>105312.21000000</Low>
+    <Close>105312.21000000</Close>
+    <Volume>1.00526000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:33:00</Timestamp>
+    <Open>105312.22000000</Open>
+    <High>105342.69000000</High>
+    <Low>105312.21000000</Low>
+    <Close>105312.21000000</Close>
+    <Volume>9.54408000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:34:00</Timestamp>
+    <Open>105312.22000000</Open>
+    <High>105320.31000000</High>
+    <Low>105312.22000000</Low>
+    <Close>105316.74000000</Close>
+    <Volume>1.95181000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:35:00</Timestamp>
+    <Open>105316.75000000</Open>
+    <High>105316.75000000</High>
+    <Low>105292.45000000</Low>
+    <Close>105300.00000000</Close>
+    <Volume>17.52898000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:36:00</Timestamp>
+    <Open>105300.00000000</Open>
+    <High>105300.01000000</High>
+    <Low>105268.18000000</Low>
+    <Close>105285.43000000</Close>
+    <Volume>9.32011000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:37:00</Timestamp>
+    <Open>105285.43000000</Open>
+    <High>105285.44000000</High>
+    <Low>105256.00000000</Low>
+    <Close>105256.00000000</Close>
+    <Volume>2.83794000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:38:00</Timestamp>
+    <Open>105256.01000000</Open>
+    <High>105290.51000000</High>
+    <Low>105256.00000000</Low>
+    <Close>105290.51000000</Close>
+    <Volume>7.88085000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:39:00</Timestamp>
+    <Open>105290.51000000</Open>
+    <High>105302.06000000</High>
+    <Low>105290.50000000</Low>
+    <Close>105300.00000000</Close>
+    <Volume>7.64563000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:40:00</Timestamp>
+    <Open>105300.00000000</Open>
+    <High>105320.00000000</High>
+    <Low>105299.99000000</Low>
+    <Close>105319.99000000</Close>
+    <Volume>3.75722000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:41:00</Timestamp>
+    <Open>105320.00000000</Open>
+    <High>105376.34000000</High>
+    <Low>105319.99000000</Low>
+    <Close>105376.33000000</Close>
+    <Volume>16.13064000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:42:00</Timestamp>
+    <Open>105376.33000000</Open>
+    <High>105376.34000000</High>
+    <Low>105353.32000000</Low>
+    <Close>105353.32000000</Close>
+    <Volume>2.82165000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:43:00</Timestamp>
+    <Open>105353.32000000</Open>
+    <High>105372.03000000</High>
+    <Low>105353.32000000</Low>
+    <Close>105372.02000000</Close>
+    <Volume>3.60817000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:44:00</Timestamp>
+    <Open>105372.02000000</Open>
+    <High>105372.03000000</High>
+    <Low>105273.20000000</Low>
+    <Close>105273.21000000</Close>
+    <Volume>9.06443000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:45:00</Timestamp>
+    <Open>105273.20000000</Open>
+    <High>105299.94000000</High>
+    <Low>105273.20000000</Low>
+    <Close>105299.94000000</Close>
+    <Volume>6.05079000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:46:00</Timestamp>
+    <Open>105299.94000000</Open>
+    <High>105312.38000000</High>
+    <Low>105299.93000000</Low>
+    <Close>105307.37000000</Close>
+    <Volume>3.20008000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:47:00</Timestamp>
+    <Open>105307.37000000</Open>
+    <High>105332.00000000</High>
+    <Low>105307.37000000</Low>
+    <Close>105331.99000000</Close>
+    <Volume>6.49209000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:48:00</Timestamp>
+    <Open>105332.00000000</Open>
+    <High>105332.00000000</High>
+    <Low>105321.04000000</Low>
+    <Close>105321.05000000</Close>
+    <Volume>6.24511000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:49:00</Timestamp>
+    <Open>105321.04000000</Open>
+    <High>105321.05000000</High>
+    <Low>105314.95000000</Low>
+    <Close>105314.96000000</Close>
+    <Volume>3.15732000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:50:00</Timestamp>
+    <Open>105314.96000000</Open>
+    <High>105314.96000000</High>
+    <Low>105314.95000000</Low>
+    <Close>105314.95000000</Close>
+    <Volume>1.12883000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:51:00</Timestamp>
+    <Open>105314.95000000</Open>
+    <High>105326.37000000</High>
+    <Low>105314.00000000</Low>
+    <Close>105326.37000000</Close>
+    <Volume>7.17253000</Volume>
+  </Entry>
+  <Entry>
+    <Timestamp>2025-06-03 14:52:00</Timestamp>
+    <Open>105326.36000000</Open>
+    <High>105326.37000000</High>
+    <Low>105326.36000000</Low>
+    <Close>105326.36000000</Close>
+    <Volume>1.42525000</Volume>
   </Entry>
 </BitcoinData>

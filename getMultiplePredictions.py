@@ -57,7 +57,8 @@ future = pd.DataFrame({
     'predicted_close': [np.nan] * len(future_timestamps),
     'trade_direction': [None] * len(future_timestamps),
     'take_profit': [None] * len(future_timestamps),
-    'stop_loss': [None] * len(future_timestamps)
+    'stop_loss': [None] * len(future_timestamps),
+    'top_trade': [False] * len(future_timestamps)
 })
 
 for i, p in enumerate(future_predictions):
@@ -106,14 +107,16 @@ for tp in tp_options:
 TP_MULTIPLIER = best_result["TP_MULTIPLIER"]
 SL_MULTIPLIER = best_result["SL_MULTIPLIER"]
 
-# Threshold und Trade-Logik mit Lookahead
-lookahead = 5  # Minuten
+# Nur den besten Trade markieren
+lookahead = 10
+best_idx = None
+best_strength = -1
+
 for i, p in enumerate(future_predictions):
     predicted_close = future.loc[i, 'predicted_close']
-    threshold = 0.01 * avg_atr / predicted_close  # Dynamisch
+    threshold = 0.01 * avg_atr / predicted_close
 
     if abs(p) < threshold:
-        print(f"{i}: Prediction={p:.5f}, Threshold={threshold:.5f}, Pass=False")
         continue
 
     direction = "long" if p > 0 else "short"
@@ -131,12 +134,23 @@ for i, p in enumerate(future_predictions):
                 will_hit = True
                 break
 
-    print(f"{i}: Prediction={p:.5f}, Threshold={threshold:.5f}, Direction={direction}, TP={tp:.2f}, SL={sl:.2f}, Hit={will_hit}")
-
     if will_hit:
-        future.loc[i, 'trade_direction'] = direction
-        future.loc[i, 'take_profit'] = tp
-        future.loc[i, 'stop_loss'] = sl
+        strength = abs(tp - sl)
+        if strength > best_strength:
+            best_idx = i
+            best_strength = strength
+            best_values = {
+                "direction": direction,
+                "tp": tp,
+                "sl": sl
+            }
+
+# Nur für den besten Trade setzen
+if best_idx is not None:
+    future.loc[best_idx, 'trade_direction'] = best_values["direction"]
+    future.loc[best_idx, 'take_profit'] = best_values["tp"]
+    future.loc[best_idx, 'stop_loss'] = best_values["sl"]
+    future.loc[best_idx, 'top_trade'] = True
 
 # Kombinieren & Speichern
 combined = []
@@ -147,7 +161,8 @@ for i, row in historical.iterrows():
         'predicted_close': None,
         'take_profit': None,
         'stop_loss': None,
-        'trade_direction': None
+        'trade_direction': None,
+        'top_trade': False
     })
 
 for i, row in future.iterrows():
@@ -157,10 +172,11 @@ for i, row in future.iterrows():
         'predicted_close': row['predicted_close'],
         'take_profit': row['take_profit'],
         'stop_loss': row['stop_loss'],
-        'trade_direction': row['trade_direction']
+        'trade_direction': row['trade_direction'],
+        'top_trade': row['top_trade']
     })
 
 with open('combined_predictions.json', 'w') as f:
     json.dump(combined, f, indent=2)
 
-print("Minütliche Vorhersagen mit Trade-Richtung, TP & SL gespeichert.")
+print("Vorhersagen gespeichert. Top-Trade markiert.")

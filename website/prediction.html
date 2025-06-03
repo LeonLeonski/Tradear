@@ -84,31 +84,20 @@
 
       const actualData = fullData.filter(d => d.actual_close !== null).map(d => ({ x: new Date(d.timestamp), y: +d.actual_close }));
       const predictedData = fullData.filter(d => d.predicted_close !== null).map(d => ({ x: new Date(d.timestamp), y: +d.predicted_close }));
-      const takeProfitData = fullData.filter(d => d.take_profit !== null).map(d => ({ x: new Date(d.timestamp), y: +d.take_profit }));
-      const stopLossData = fullData.filter(d => d.stop_loss !== null).map(d => ({ x: new Date(d.timestamp), y: +d.stop_loss }));
 
-      const firstPrediction = fullData.find(d => d.predicted_close !== null);
-      let tradeTakeProfit = null;
-      let tradeStopLoss = null;
-      let tradeStartTime = null;
-      let tradeEndTime = null;
+      const topTrade = fullData.find(d => d.top_trade);
 
-      if (firstPrediction) {
-        tradeTakeProfit = firstPrediction.take_profit;
-        tradeStopLoss = firstPrediction.stop_loss;
-        tradeStartTime = new Date(firstPrediction.timestamp);
-        const lastPrediction = [...fullData].reverse().find(d => d.predicted_close !== null);
-        tradeEndTime = lastPrediction ? new Date(lastPrediction.timestamp) : tradeStartTime;
-      }
+      const startTime = fullData.length ? new Date(fullData[0].timestamp) : null;
+      const endTime = fullData.length ? new Date(fullData[fullData.length - 1].timestamp) : null;
 
-      const takeProfitLine = (tradeTakeProfit !== null && tradeEndTime) ? [
-        { x: tradeStartTime, y: tradeTakeProfit },
-        { x: tradeEndTime, y: tradeTakeProfit }
+      const takeProfitLine = topTrade && startTime && endTime ? [
+        { x: startTime, y: +topTrade.take_profit },
+        { x: endTime, y: +topTrade.take_profit }
       ] : [];
 
-      const stopLossLine = (tradeStopLoss !== null && tradeEndTime) ? [
-        { x: tradeStartTime, y: tradeStopLoss },
-        { x: tradeEndTime, y: tradeStopLoss }
+      const stopLossLine = topTrade && startTime && endTime ? [
+        { x: startTime, y: +topTrade.stop_loss },
+        { x: endTime, y: +topTrade.stop_loss }
       ] : [];
 
       const ctx = document.getElementById('combinedChart').getContext('2d');
@@ -134,7 +123,7 @@
               spanGaps: true,
             },
             {
-              label: 'Take-Profit',
+              label: 'Take-Profit (Linie)',
               data: takeProfitLine,
               borderColor: 'rgba(54, 162, 235, 0.8)',
               borderDash: [2, 2],
@@ -144,7 +133,7 @@
               spanGaps: true,
             },
             {
-              label: 'Stop-Loss',
+              label: 'Stop-Loss (Linie)',
               data: stopLossLine,
               borderColor: 'rgba(255, 206, 86, 0.8)',
               borderDash: [2, 2],
@@ -152,6 +141,15 @@
               pointRadius: 0,
               tension: 0,
               spanGaps: true,
+            },
+            {
+              label: 'Top Trade',
+              data: topTrade ? [{ x: new Date(topTrade.timestamp), y: +topTrade.predicted_close }] : [],
+              borderColor: 'rgba(0, 200, 83, 1)',
+              backgroundColor: 'rgba(0, 200, 83, 1)',
+              pointRadius: 6,
+              pointStyle: 'star',
+              type: 'scatter'
             }
           ]
         },
@@ -188,12 +186,17 @@
       });
 
       const tradeList = document.getElementById('tradeDetails');
-      fullData.filter(d => d.trade_direction).forEach(trade => {
+      if (topTrade) {
+        const li = document.createElement('li');
+        li.className = 'list-group-item list-group-item-success';
+        li.innerHTML = `<strong>${topTrade.timestamp} | ${topTrade.trade_direction.toUpperCase()} | TP: ${topTrade.take_profit?.toFixed(2)} | SL: ${topTrade.stop_loss?.toFixed(2)} ← Top Trade</strong>`;
+        tradeList.appendChild(li);
+      } else {
         const li = document.createElement('li');
         li.className = 'list-group-item';
-        li.textContent = `${trade.timestamp} | ${trade.trade_direction.toUpperCase()} | TP: ${trade.take_profit?.toFixed(2)} | SL: ${trade.stop_loss?.toFixed(2)}`;
+        li.textContent = 'Kein geeigneter Trade gefunden.';
         tradeList.appendChild(li);
-      });
+      }
     })
     .catch(err => console.error('Fehler beim Laden der Vorhersagedaten:', err));
 </script>
