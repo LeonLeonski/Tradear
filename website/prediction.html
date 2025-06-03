@@ -58,57 +58,36 @@
       <canvas id="combinedChart" style="max-height: 450px;"></canvas>
     </div>
   </div>
+
+  <div class="row">
+    <div class="col">
+      <h4>Trade-Details:</h4>
+      <ul id="tradeDetails" class="list-group"></ul>
+    </div>
+  </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-  // Tooltip initialisieren
-  document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => {
-    new bootstrap.Tooltip(el);
-  });
+  document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => new bootstrap.Tooltip(el));
 </script>
 
 <script>
   let fullData = [];
   let combinedChart;
 
-  // Daten laden und Chart initialisieren
   fetch('../combined_predictions.json')
     .then(res => res.json())
     .then(data => {
-        console.log('Geladene Vorhersagedaten:', data);
+      if (data.length > 70) data = data.slice(-70);
+      fullData = data;
 
+      const actualData = fullData.filter(d => d.actual_close !== null).map(d => ({ x: new Date(d.timestamp), y: +d.actual_close }));
+      const predictedData = fullData.filter(d => d.predicted_close !== null).map(d => ({ x: new Date(d.timestamp), y: +d.predicted_close }));
+      const takeProfitData = fullData.filter(d => d.take_profit !== null).map(d => ({ x: new Date(d.timestamp), y: +d.take_profit }));
+      const stopLossData = fullData.filter(d => d.stop_loss !== null).map(d => ({ x: new Date(d.timestamp), y: +d.stop_loss }));
 
-        if (data.length > 70) {
-            data = data.slice(-70);
-            fullData = data; // Speichern der Daten
-        }
-        
-
-      //fullData = data; // Speichern der Daten
-
-      // Erstellen der tatsächlichen und vorhergesagten Kurs-Daten
-      const actualData = fullData
-        .filter(d => d.actual_close !== null)
-        .map(d => ({ x: new Date(d.timestamp), y: +d.actual_close }));
-
-      const predictedData = fullData
-        .filter(d => d.predicted_close !== null)
-        .map(d => ({ x: new Date(d.timestamp), y: +d.predicted_close }));
-
-      // Take-Profit- und Stop-Loss-Daten für Vorhersagepunkte
-      const takeProfitData = fullData
-        .filter(d => d.take_profit !== null)
-        .map(d => ({ x: new Date(d.timestamp), y: +d.take_profit }));
-
-      const stopLossData = fullData
-        .filter(d => d.stop_loss !== null)
-        .map(d => ({ x: new Date(d.timestamp), y: +d.stop_loss }));
-
-      // Finde den ersten Vorhersagepunkt
       const firstPrediction = fullData.find(d => d.predicted_close !== null);
-
-      // Falls vorhanden, berechne Take-Profit und Stop-Loss für den Trade-Einstieg
       let tradeTakeProfit = null;
       let tradeStopLoss = null;
       let tradeStartTime = null;
@@ -118,28 +97,20 @@
         tradeTakeProfit = firstPrediction.take_profit;
         tradeStopLoss = firstPrediction.stop_loss;
         tradeStartTime = new Date(firstPrediction.timestamp);
-
-        // Optional: Trade-Ende als letztes Vorhersagedatum
         const lastPrediction = [...fullData].reverse().find(d => d.predicted_close !== null);
         tradeEndTime = lastPrediction ? new Date(lastPrediction.timestamp) : tradeStartTime;
       }
 
-      // Erzeuge waagerechte Linien für Take-Profit und Stop-Loss
-      const takeProfitLine = (tradeTakeProfit !== null && tradeEndTime)
-        ? [
-            { x: tradeStartTime, y: tradeTakeProfit },
-            { x: tradeEndTime, y: tradeTakeProfit }
-          ]
-        : [];
+      const takeProfitLine = (tradeTakeProfit !== null && tradeEndTime) ? [
+        { x: tradeStartTime, y: tradeTakeProfit },
+        { x: tradeEndTime, y: tradeTakeProfit }
+      ] : [];
 
-      const stopLossLine = (tradeStopLoss !== null && tradeEndTime)
-        ? [
-            { x: tradeStartTime, y: tradeStopLoss },
-            { x: tradeEndTime, y: tradeStopLoss }
-          ]
-        : [];
+      const stopLossLine = (tradeStopLoss !== null && tradeEndTime) ? [
+        { x: tradeStartTime, y: tradeStopLoss },
+        { x: tradeEndTime, y: tradeStopLoss }
+      ] : [];
 
-      // Chart initialisieren
       const ctx = document.getElementById('combinedChart').getContext('2d');
       combinedChart = new Chart(ctx, {
         type: 'line',
@@ -214,6 +185,14 @@
             tooltip: { enabled: true }
           }
         }
+      });
+
+      const tradeList = document.getElementById('tradeDetails');
+      fullData.filter(d => d.trade_direction).forEach(trade => {
+        const li = document.createElement('li');
+        li.className = 'list-group-item';
+        li.textContent = `${trade.timestamp} | ${trade.trade_direction.toUpperCase()} | TP: ${trade.take_profit?.toFixed(2)} | SL: ${trade.stop_loss?.toFixed(2)}`;
+        tradeList.appendChild(li);
       });
     })
     .catch(err => console.error('Fehler beim Laden der Vorhersagedaten:', err));
