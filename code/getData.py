@@ -6,14 +6,15 @@ import sys
 import os
 import logging
 
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s [%(levelname)s] %(message)s",
-    handlers=[
-        logging.FileHandler("tradear.log", encoding="utf-8"),
-        logging.StreamHandler()
-    ]
-)
+def setup_logging():
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s [%(levelname)s] %(message)s",
+        handlers=[
+            logging.FileHandler("tradear.log", encoding="utf-8"),
+            logging.StreamHandler()
+        ]
+    )
 
 def fetch_binance_klines(symbol='BTCUSDT', interval='1m', limit=1440):
     url = f"https://api.binance.com/api/v3/klines?symbol={symbol}&interval={interval}&limit={limit}"
@@ -60,7 +61,6 @@ def save_to_xml(data, filename='./data/bc_data.xml'):
         xml_str = ET.tostring(root, encoding='utf-8')
         pretty_xml = minidom.parseString(xml_str).toprettyxml(indent="  ", encoding='utf-8')
 
-        # Stelle sicher, dass der Zielordner existiert
         os.makedirs(os.path.dirname(filename), exist_ok=True)
 
         with open(filename, 'wb') as f:
@@ -72,6 +72,7 @@ def save_to_xml(data, filename='./data/bc_data.xml'):
         sys.exit(1)
 
 def main():
+    setup_logging()
     try:
         logging.info("Starte Datenabruf von Binance...")
         klines = fetch_binance_klines(limit=1440)
