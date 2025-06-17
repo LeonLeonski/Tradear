@@ -1,24 +1,22 @@
 import subprocess
 import sys
-import os
 
-# Liste der Skripte, die nacheinander ausgeführt werden sollen
-scripts = [
-    "src/getData.py",
-    "src/calculateData.py",
-    "src/getMultiplePredictions.py"
+# Liste der Module, die nacheinander ausgeführt werden sollen
+modules = [
+    "src.getData",
+    "src.calculateData",
+    "src.getMultiplePredictions"
 ]
 
-def run_script(script_name):
-    script_path = os.path.join(os.path.dirname(__file__), script_name)
-    print(f"Starte {script_name} ...")
-    result = subprocess.run([sys.executable, script_path])
+def run_module(module_name):
+    print(f"Starte {module_name} ...")
+    result = subprocess.run([sys.executable, "-m", module_name])
     if result.returncode != 0:
-        print(f"Fehler beim Ausführen von {script_name}.")
+        print(f"Fehler beim Ausführen von {module_name}.")
         sys.exit(result.returncode)
-    print(f"{script_name} erfolgreich abgeschlossen.\n")
+    print(f"{module_name} erfolgreich abgeschlossen.\n")
 
 if __name__ == "__main__":
-    for script in scripts:
-        run_script(script)
+    for module in modules:
+        run_module(module)
     print("Alle Skripte wurden erfolgreich ausgeführt.")

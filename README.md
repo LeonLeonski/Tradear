@@ -49,20 +49,7 @@ Wenn du z.B. mehr oder weniger Daten laden, andere Modellgrößen oder andere Op
 
 ---
 
-# Roadmap & To-Do-Liste
-
-## To-Dos (Kurzfristig)
-
-- [X] Fehlerbehandlung in allen Skripten verbessern (z.B. try/except für Dateioperationen)
-- [X] Code modularisieren: Wiederverwendbare Funktionen für Indikatoren und Datenverarbeitung auslagern
-- [X] Logging statt print-Statements verwenden
-- [X] Unit Tests für zentrale Funktionen schreiben
-- [X] Konfigurationsdatei für Parameter (API-Keys, Schwellenwerte, Limits) einführen
-- [X] `.gitignore`-Datei korrigieren (`combined_predictions.json` statt `combinded_predictions.json`)
-- [X] Dokumentation der einzelnen Skripte und deren Zusammenspiel ergänzen
-- [X] Deprecated Nachrichten entfernen
-
-## Roadmap (Mittelfristig)
+# Roadmap
 
 1. **Zentrales Hauptskript**
    - [X] Ein zentrales Skript erstellen, das die Einzelschritte orchestriert (z.B. `main.py`)
@@ -87,7 +74,7 @@ Wenn du z.B. mehr oder weniger Daten laden, andere Modellgrößen oder andere Op
 
 ---
 
-## Skripte und Zusammenspiel (Kurzüberblick)
+# Skripte und Zusammenspiel (Kurzüberblick)
 
 - **getData.py**  
   Holt aktuelle Bitcoin-Daten von Binance und speichert sie als XML.
@@ -105,5 +92,3 @@ Wenn du z.B. mehr oder weniger Daten laden, andere Modellgrößen oder andere Op
 `main.py` → `getData.py` → `calculateData.py` → `getMultiplePredictions.py`
 
 Alle Zwischenergebnisse werden als Datei gespeichert und von den nächsten Schritten genutzt.
-
-*Diese Liste dient als Übersicht für die nächsten Entwicklungsschritte und kann bei Bedarf erweitert oder angepasst werden.*
