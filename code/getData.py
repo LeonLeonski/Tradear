@@ -14,7 +14,7 @@ def timestamp_to_str(ms):
     dt = datetime.utcfromtimestamp(ms / 1000) + timedelta(hours=2)
     return dt.strftime('%Y-%m-%d %H:%M:%S')
 
-def save_to_xml(data, filename='bc_data.xml'):
+def save_to_xml(data, filename='./data/bc_data.xml'):
     root = ET.Element("BitcoinData")
 
     for candle in data:

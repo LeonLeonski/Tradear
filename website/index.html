@@ -104,7 +104,7 @@
   let bitcoinChart, smaChart, atrChart;
 
   // Daten laden und Charts initialisieren
-  fetch('../calculated_bitcoin_data.json')
+  fetch('../data/calculated_bitcoin_data.json')
     .then(response => response.json())
     .then(data => {
       fullData = data;

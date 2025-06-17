@@ -5,7 +5,7 @@ import scipy.stats as stats
 
 
 # 1. XML-Datei einlesen und in eine Liste von Dicts umwandeln
-tree = ET.parse('bc_data.xml')
+tree = ET.parse('./data/bc_data.xml')
 root = tree.getroot()
 
 data = []
@@ -114,7 +114,7 @@ columns_to_save = ['timestamp', 'open', 'high', 'low', 'close', 'volume',
 result_data = result_df[columns_to_save]
 
 # 7. In JSON speichern
-with open('calculated_bitcoin_data.json', 'w') as outfile:
+with open('./data/calculated_bitcoin_data.json', 'w') as outfile:
     json.dump(result_data.to_dict(orient='records'), outfile, indent=2)
 
 print("Berechnungen abgeschlossen und in 'calculated_bitcoin_data.json' gespeichert.")

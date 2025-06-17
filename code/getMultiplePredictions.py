@@ -4,7 +4,7 @@ from sklearn.ensemble import RandomForestRegressor
 import json
 
 # Daten laden und vorbereiten
-with open('calculated_bitcoin_data.json', 'r') as f:
+with open('./data/calculated_bitcoin_data.json', 'r') as f:
     data = json.load(f)
 
 df = pd.DataFrame(data)
@@ -176,7 +176,7 @@ for i, row in future.iterrows():
         'top_trade': row['top_trade']
     })
 
-with open('combined_predictions.json', 'w') as f:
+with open('./data/combined_predictions.json', 'w') as f:
     json.dump(combined, f, indent=2)
 
 print("Vorhersagen gespeichert. Top-Trade markiert.")

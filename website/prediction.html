@@ -76,7 +76,7 @@
   let fullData = [];
   let combinedChart;
 
-  fetch('../combined_predictions.json')
+  fetch('../data/combined_predictions.json')
     .then(res => res.json())
     .then(data => {
       if (data.length > 70) data = data.slice(-70);
