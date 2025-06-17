@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Backtest-Ergebnisse</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+  <div class="container">
+    <a class="navbar-brand" href="#">Bitcoin Dashboard</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="index.html">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="prediction.html">Prediction</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Backtest</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <h2 class="mb-4 text-center">Backtest-Ergebnisse der Trades</h2>
+  <div id="stats" class="mb-3"></div>
+  <div class="table-responsive">
+    <table class="table table-striped" id="backtestTable">
+      <thead>
+        <tr>
+          <th>Zeitpunkt</th>
+          <th>Richtung</th>
+          <th>TP</th>
+          <th>SL</th>
+          <th>Ergebnis</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+fetch('../data/backtest_results.json')
+  .then(res => res.json())
+  .then(data => {
+    // Nur Trades mit Richtung anzeigen
+    const trades = data.filter(d => d.trade_direction);
+    const tbody = document.querySelector('#backtestTable tbody');
+    let win = 0, loss = 0, open = 0;
+
+    trades.forEach(trade => {
+      let resultClass = '';
+      if (trade.trade_result === 'win') { resultClass = 'table-success'; win++; }
+      else if (trade.trade_result === 'loss') { resultClass = 'table-danger'; loss++; }
+      else { resultClass = 'table-warning'; open++; }
+
+      const row = `<tr class="${resultClass}">
+        <td>${new Date(trade.timestamp).toLocaleString()}</td>
+        <td>${trade.trade_direction ? trade.trade_direction.toUpperCase() : ''}</td>
+        <td>${trade.take_profit !== null ? trade.take_profit.toFixed(2) : ''}</td>
+        <td>${trade.stop_loss !== null ? trade.stop_loss.toFixed(2) : ''}</td>
+        <td>${trade.trade_result ? trade.trade_result.toUpperCase() : ''}</td>
+      </tr>`;
+      tbody.insertAdjacentHTML('beforeend', row);
+    });
+
+    // Statistik anzeigen
+    const statsDiv = document.getElementById('stats');
+    const total = win + loss + open;
+    statsDiv.innerHTML = `
+      <div class="alert alert-info">
+        <strong>Erfolgsquote:</strong> ${total ? ((win / total) * 100).toFixed(1) : 0}%<br>
+        <span class="text-success">Gewonnen: ${win}</span> |
+        <span class="text-danger">Verloren: ${loss}</span> |
+        <span class="text-warning">Offen: ${open}</span>
+      </div>
+    `;
+  })
+  .catch(err => {
+    document.getElementById('stats').innerHTML = '<div class="alert alert-danger">Fehler beim Laden der Backtest-Daten.</div>';
+    console.error(err);
+  });
+</script>
+</body>
+</html>

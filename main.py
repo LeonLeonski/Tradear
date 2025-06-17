@@ -5,7 +5,8 @@ import sys
 modules = [
     "src.getData",
     "src.calculateData",
-    "src.getMultiplePredictions"
+    "src.getMultiplePredictions",
+    "src.trade_backtest" # Backtesting der Trades
 ]
 
 def run_module(module_name):
