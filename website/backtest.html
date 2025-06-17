@@ -74,8 +74,8 @@ fetch('../data/backtest_results.json')
         <td>${trade.take_profit !== null ? trade.take_profit.toFixed(2) : ''}</td>
         <td>${trade.stop_loss !== null ? trade.stop_loss.toFixed(2) : ''}</td>
         <td>${trade.status ? trade.status.toUpperCase() : ''}</td>
-        <td>${trade.trade_result ? trade.trade_result.toUpperCase() : ''}</td>
-        <td>${trade.pnl !== undefined && trade.pnl !== null ? trade.pnl.toFixed(2) : ''}</td>
+        <td>${trade.status === 'closed' ? (trade.trade_result ? trade.trade_result.toUpperCase() : '-') : '-'}</td>
+        <td>${trade.status === 'closed' && trade.pnl !== undefined && trade.pnl !== null ? trade.pnl.toFixed(2) : '-'}</td>
       </tr>`;
       tbody.insertAdjacentHTML('beforeend', row);
     });

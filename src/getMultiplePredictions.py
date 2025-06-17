@@ -136,7 +136,9 @@ def mark_best_trade(future, future_predictions, avg_atr, TP_MULTIPLIER, SL_MULTI
             tp = predicted_close + TP_MULTIPLIER * avg_atr if direction == "long" else predicted_close - TP_MULTIPLIER * avg_atr
             sl = predicted_close - SL_MULTIPLIER * avg_atr if direction == "long" else predicted_close + SL_MULTIPLIER * avg_atr
             will_hit = False
-            for j in range(1, lookahead + 1):
+            # Wir starten bei j=2, um Lookahead Bias zu vermeiden:
+            # TP/SL dürfen nicht in der ersten Minute nach Einstieg getroffen werden.
+            for j in range(2, lookahead + 1):
                 if i + j < len(future):
                     test_price = future.loc[i + j, 'predicted_close']
                     if direction == "long" and (test_price >= tp or test_price <= sl):

@@ -19,13 +19,10 @@ def load_existing_backtests(output_json_path):
         with open(output_json_path, "r", encoding="utf-8") as f:
             try:
                 data = json.load(f)
-                # Wenn Datei ein dict mit "trades" enthält, gib diese Liste zurück
                 if isinstance(data, dict) and "trades" in data:
                     return data["trades"]
-                # Falls Datei eine Liste ist, gib sie direkt zurück
                 if isinstance(data, list):
                     return data
-                # Sonst leere Liste
                 return []
             except Exception:
                 return []
@@ -45,11 +42,9 @@ def clean_for_json(obj):
     return obj
 
 def save_backtests(backtests, portfolio, output_json_path):
-    # Konvertiere alle Timestamps zu Strings
     for trade in backtests:
         if "timestamp" in trade and not isinstance(trade["timestamp"], str):
             trade["timestamp"] = str(trade["timestamp"])
-    # Speichere Trades und Portfolio gemeinsam
     out = {
         "trades": clean_for_json(backtests),
         "portfolio": portfolio
@@ -73,6 +68,8 @@ def update_trade_result(trade, candles, lookahead=10):
     if len(entry_idx) == 0:
         trade["trade_result"] = "not_found"
         trade["status"] = "closed"
+        trade["exit_price"] = None
+        trade["pnl"] = 0.0
         return trade
     entry_idx = entry_idx[0]
 
@@ -81,6 +78,7 @@ def update_trade_result(trade, candles, lookahead=10):
     sl = trade['stop_loss']
     trade_result = trade.get("trade_result", "open")
     status = "open"
+    exit_price = None
     for i in range(1, lookahead + 1):
         if entry_idx + i >= len(candles):
             break
@@ -90,31 +88,47 @@ def update_trade_result(trade, candles, lookahead=10):
             if high >= tp:
                 trade_result = "win"
                 status = "closed"
+                exit_price = tp
                 break
             if low <= sl:
                 trade_result = "loss"
                 status = "closed"
+                exit_price = sl
                 break
         elif direction == "short":
             if low <= tp:
                 trade_result = "win"
                 status = "closed"
+                exit_price = tp
                 break
             if high >= sl:
                 trade_result = "loss"
                 status = "closed"
+                exit_price = sl
                 break
     trade["trade_result"] = trade_result
     trade["status"] = status
+    trade["exit_price"] = exit_price
+    trade["pnl"] = calculate_pnl(trade)
     return trade
 
 def calculate_pnl(trade):
-    # Simuliere 1 BTC pro Trade
-    if trade["trade_result"] == "win":
-        return abs(trade["take_profit"] - trade["predicted_close"])
-    elif trade["trade_result"] == "loss":
-        return -abs(trade["stop_loss"] - trade["predicted_close"])
-    return 0
+    """
+    Berechnet den Profit & Loss für einen abgeschlossenen Trade.
+    Für SHORT: PnL = (Entry - Exit) / Entry * Position_Size
+    Für LONG:  PnL = (Exit - Entry) / Entry * Position_Size
+    """
+    if trade.get('status') != 'closed':
+        return 0.0
+    entry = trade.get('entry_price')
+    exit = trade.get('exit_price')
+    size = trade.get('position_size', 0)
+    if entry is None or exit is None or size == 0:
+        return 0.0
+    if trade.get('trade_direction') == 'short':
+        return (entry - exit) / entry * size
+    else:
+        return (exit - entry) / entry * size
 
 def update_portfolio(backtests, initial_balance=0):
     balance = initial_balance
@@ -156,6 +170,13 @@ def backtest_top_trade(trades_json_path, candles_json_path, output_json_path, lo
         if not trade_already_tracked(existing_backtests, top_trade):
             top_trade["trade_result"] = "open"
             top_trade["status"] = "open"
+            top_trade["position_size"] = 1000  # Beispiel: 1000 USD pro Trade
+            # Hole den Einstiegspreis (close) aus den Candles zum Trade-Zeitpunkt
+            entry_row = candles[candles['timestamp'] == top_trade['timestamp']]
+            if not entry_row.empty:
+                top_trade["entry_price"] = float(entry_row.iloc[0]['close'])
+            else:
+                top_trade["entry_price"] = None
             existing_backtests.append(top_trade)
 
     # Aktualisiere alle bisherigen Top-Trades
