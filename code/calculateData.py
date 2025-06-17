@@ -4,6 +4,16 @@ import json
 import scipy.stats as stats
 import sys
 import os
+import logging
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    handlers=[
+        logging.FileHandler("tradear.log", encoding="utf-8"),
+        logging.StreamHandler()
+    ]
+)
 
 # Fehlerbehandlung für das Einlesen der XML-Datei
 try:
@@ -12,13 +22,13 @@ try:
     tree = ET.parse('./data/bc_data.xml')
     root = tree.getroot()
 except FileNotFoundError as fnf_err:
-    print(f"Fehler: {fnf_err}")
+    logging.error(f"Fehler: {fnf_err}")
     sys.exit(1)
 except ET.ParseError as parse_err:
-    print(f"Fehler beim Parsen der XML-Datei: {parse_err}")
+    logging.error(f"Fehler beim Parsen der XML-Datei: {parse_err}")
     sys.exit(1)
 except Exception as e:
-    print(f"Unerwarteter Fehler beim Einlesen der XML-Datei: {e}")
+    logging.critical(f"Unerwarteter Fehler beim Einlesen der XML-Datei: {e}")
     sys.exit(1)
 
 data = []
@@ -39,12 +49,12 @@ for entry in root.findall('Entry'):
             'volume': volume
         })
     except Exception as e:
-        print(f"Fehler beim Verarbeiten eines Eintrags: {e}")
+        logging.warning(f"Fehler beim Verarbeiten eines Eintrags: {e}")
         continue
 
 # Fehlerbehandlung für leere Daten
 if not data:
-    print("Keine gültigen Daten in der XML-Datei gefunden.")
+    logging.error("Keine gültigen Daten in der XML-Datei gefunden.")
     sys.exit(1)
 
 # 2. In DataFrame umwandeln und Datum als Index setzen
@@ -53,7 +63,7 @@ try:
     df['Date'] = pd.to_datetime(df['timestamp'])
     df.set_index('Date', inplace=True)
 except Exception as e:
-    print(f"Fehler beim Erstellen des DataFrames: {e}")
+    logging.error(f"Fehler beim Erstellen des DataFrames: {e}")
     sys.exit(1)
 
 # 3. Berechnungen (aus calculatePrice.py übernommen)
@@ -64,21 +74,21 @@ def calculate_basic_metrics(df):
         df['Change'] = df['close'].diff()
         df['Pct_Change'] = df['close'].pct_change() * 100
     except Exception as e:
-        print(f"Fehler bei calculate_basic_metrics: {e}")
+        logging.warning(f"Fehler bei calculate_basic_metrics: {e}")
     return df
 
 def calculate_sma(df, period):
     try:
         return df['close'].rolling(window=period).mean()
     except Exception as e:
-        print(f"Fehler bei calculate_sma: {e}")
+        logging.warning(f"Fehler bei calculate_sma: {e}")
         return pd.Series([None]*len(df))
 
 def identify_doji(df, body_threshold=0.1, range_threshold=0):
     try:
         df['Doji'] = ((abs(df['close'] - df['open']) / (df['high'] - df['low'])) < body_threshold) & ((df['high'] - df['low']) > range_threshold)
     except Exception as e:
-        print(f"Fehler bei identify_doji: {e}")
+        logging.warning(f"Fehler bei identify_doji: {e}")
         df['Doji'] = False
     return df
 
@@ -90,7 +100,7 @@ def calculate_atr(df, period=14):
         df['TR'] = df[['HL', 'HCp', 'LCp']].max(axis=1)
         df['ATR'] = df['TR'].rolling(window=period).mean()
     except Exception as e:
-        print(f"Fehler bei calculate_atr: {e}")
+        logging.warning(f"Fehler bei calculate_atr: {e}")
     return df
 
 def calculate_golden_cross_signal(df, short_period=20, long_period=50):
@@ -99,7 +109,7 @@ def calculate_golden_cross_signal(df, short_period=20, long_period=50):
         df['SMA_50'] = calculate_sma(df, long_period)
         df['Golden_Cross'] = (df['SMA_20'] > df['SMA_50']) & (df['SMA_20'].shift(1) <= df['SMA_50'].shift(1))
     except Exception as e:
-        print(f"Fehler bei calculate_golden_cross_signal: {e}")
+        logging.warning(f"Fehler bei calculate_golden_cross_signal: {e}")
         df['Golden_Cross'] = False
     return df
 
@@ -107,14 +117,14 @@ def calculate_volume_change(df):
     try:
         df['Volume_Change'] = df['volume'].diff()
     except Exception as e:
-        print(f"Fehler bei calculate_volume_change: {e}")
+        logging.warning(f"Fehler bei calculate_volume_change: {e}")
     return df
 
 def calculate_avg_volume(df, period):
     try:
         df['Avg_Volume'] = df['volume'].rolling(window=period).mean()
     except Exception as e:
-        print(f"Fehler bei calculate_avg_volume: {e}")
+        logging.warning(f"Fehler bei calculate_avg_volume: {e}")
     return df
 
 def calculate_correlation_and_pvalue(df):
@@ -125,14 +135,14 @@ def calculate_correlation_and_pvalue(df):
         df_clean = df.dropna(subset=['close', 'volume'])
         if len(df_clean) > 1:
             correlation, p_value = stats.pearsonr(df_clean['close'], df_clean['volume'])
-            print(f"Pearson-Korrelation (Close vs. Volume): {correlation:.4f}")
-            print(f"P-Wert: {p_value:.4f}")
+            logging.info(f"Pearson-Korrelation (Close vs. Volume): {correlation:.4f}")
+            logging.info(f"P-Wert: {p_value:.4f}")
             return correlation, p_value
         else:
-            print("Nicht genug Datenpunkte für die Korrelationsberechnung.")
+            logging.info("Nicht genug Datenpunkte für die Korrelationsberechnung.")
             return None, None
     except Exception as e:
-        print(f"Fehler bei calculate_correlation_and_pvalue: {e}")
+        logging.warning(f"Fehler bei calculate_correlation_and_pvalue: {e}")
         return None, None
 
 # 4. Alle Berechnungen ausführen
@@ -145,7 +155,7 @@ try:
     df = calculate_avg_volume(df, 20)
     correlation, p_value = calculate_correlation_and_pvalue(df)
 except Exception as e:
-    print(f"Fehler bei der Berechnung der Kennzahlen: {e}")
+    logging.error(f"Fehler bei der Berechnung der Kennzahlen: {e}")
     sys.exit(1)
 
 # 5. Ersetzen von NaN-Werten durch "Unzureichende Daten"
@@ -154,14 +164,14 @@ try:
         df[col] = df[col].fillna("Unzureichende Daten")
         df[col] = df[[col]].infer_objects(copy=False)[col]
 except Exception as e:
-    print(f"Fehler beim Ersetzen von NaN-Werten: {e}")
+    logging.warning(f"Fehler beim Ersetzen von NaN-Werten: {e}")
 
 # 6. Für JSON: Index zurücksetzen und Datum formatieren
 try:
     result_df = df.reset_index()
     result_df['timestamp'] = result_df['Date'].dt.strftime('%Y-%m-%d %H:%M:%S')
 except Exception as e:
-    print(f"Fehler beim Formatieren des DataFrames für JSON: {e}")
+    logging.error(f"Fehler beim Formatieren des DataFrames für JSON: {e}")
     sys.exit(1)
 
 # Wähle nur relevante Spalten für die Ausgabe
@@ -171,13 +181,13 @@ columns_to_save = ['timestamp', 'open', 'high', 'low', 'close', 'volume',
 try:
     result_data = result_df[columns_to_save]
 except Exception as e:
-    print(f"Fehler beim Auswählen der Spalten für die Ausgabe: {e}")
+    logging.error(f"Fehler beim Auswählen der Spalten für die Ausgabe: {e}")
     sys.exit(1)
 
 # 7. In JSON speichern
 try:
     with open('./data/calculated_bitcoin_data.json', 'w') as outfile:
         json.dump(result_data.to_dict(orient='records'), outfile, indent=2)
-    print("Berechnungen abgeschlossen und in 'calculated_bitcoin_data.json' gespeichert.")
+    logging.info("Berechnungen abgeschlossen und in 'calculated_bitcoin_data.json' gespeichert.")
 except Exception as e:
-    print(f"Fehler beim Speichern der Ergebnisse in die JSON-Datei: {e}")
+    logging.error(f"Fehler beim Speichern der Ergebnisse in die JSON-Datei: {e}")

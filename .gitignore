@@ -3,6 +3,9 @@
 *.json
 data/
 
+# Ignore log files
+*.log
+
 # Ignore Python cache and environment files
 __pycache__/
 *.pyc

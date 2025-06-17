@@ -23,11 +23,12 @@ python main.py
 
 - [X] Fehlerbehandlung in allen Skripten verbessern (z.B. try/except für Dateioperationen)
 - [ ] Code modularisieren: Wiederverwendbare Funktionen für Indikatoren und Datenverarbeitung auslagern
-- [ ] Logging statt print-Statements verwenden
+- [X] Logging statt print-Statements verwenden
 - [ ] Unit Tests für zentrale Funktionen schreiben
 - [ ] Konfigurationsdatei für Parameter (API-Keys, Schwellenwerte, Limits) einführen
 - [X] `.gitignore`-Datei korrigieren (`combined_predictions.json` statt `combinded_predictions.json`)
 - [ ] Dokumentation der einzelnen Skripte und deren Zusammenspiel ergänzen
+- [X] Deprecated Nachrichten entfernen
 
 ## Roadmap (Mittelfristig)
 

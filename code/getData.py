@@ -4,6 +4,16 @@ from xml.dom import minidom
 from datetime import datetime, timedelta, timezone
 import sys
 import os
+import logging
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    handlers=[
+        logging.FileHandler("tradear.log", encoding="utf-8"),
+        logging.StreamHandler()
+    ]
+)
 
 def fetch_binance_klines(symbol='BTCUSDT', interval='1m', limit=1440):
     url = f"https://api.binance.com/api/v3/klines?symbol={symbol}&interval={interval}&limit={limit}"
@@ -12,7 +22,7 @@ def fetch_binance_klines(symbol='BTCUSDT', interval='1m', limit=1440):
         response.raise_for_status()
         return response.json()
     except requests.exceptions.RequestException as e:
-        print(f"Fehler beim Abrufen der Binance-Daten: {e}")
+        logging.error(f"Fehler beim Abrufen der Binance-Daten: {e}")
         sys.exit(1)
 
 def timestamp_to_str(ms):
@@ -20,7 +30,7 @@ def timestamp_to_str(ms):
         dt = datetime.fromtimestamp(ms / 1000, timezone.utc) + timedelta(hours=2)
         return dt.strftime('%Y-%m-%d %H:%M:%S')
     except Exception as e:
-        print(f"Fehler beim Umwandeln des Timestamps: {e}")
+        logging.warning(f"Fehler beim Umwandeln des Timestamps: {e}")
         return "Unbekannt"
 
 def save_to_xml(data, filename='./data/bc_data.xml'):
@@ -44,7 +54,7 @@ def save_to_xml(data, filename='./data/bc_data.xml'):
                 ET.SubElement(entry, "Close").text = str(close_price)
                 ET.SubElement(entry, "Volume").text = str(volume)
             except Exception as e:
-                print(f"Fehler beim Verarbeiten eines Candles: {e}")
+                logging.warning(f"Fehler beim Verarbeiten eines Candles: {e}")
                 continue
 
         xml_str = ET.tostring(root, encoding='utf-8')
@@ -56,20 +66,21 @@ def save_to_xml(data, filename='./data/bc_data.xml'):
         with open(filename, 'wb') as f:
             f.write(pretty_xml)
 
-        print(f"Datei '{filename}' mit {len(data)} Einträgen gespeichert.")
+        logging.info(f"Datei '{filename}' mit {len(data)} Einträgen gespeichert.")
     except Exception as e:
-        print(f"Fehler beim Speichern der XML-Datei: {e}")
+        logging.error(f"Fehler beim Speichern der XML-Datei: {e}")
         sys.exit(1)
 
 def main():
     try:
+        logging.info("Starte Datenabruf von Binance...")
         klines = fetch_binance_klines(limit=1440)
         if not klines or not isinstance(klines, list):
-            print("Keine gültigen Daten von der Binance-API erhalten.")
+            logging.error("Keine gültigen Daten von der Binance-API erhalten.")
             sys.exit(1)
         save_to_xml(klines)
     except Exception as e:
-        print(f"Unerwarteter Fehler im Hauptprogramm: {e}")
+        logging.critical(f"Unerwarteter Fehler im Hauptprogramm: {e}")
         sys.exit(1)
 
 if __name__ == "__main__":

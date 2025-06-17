@@ -3,7 +3,16 @@ import numpy as np
 from sklearn.ensemble import RandomForestRegressor
 import json
 import sys
-import os
+import logging
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    handlers=[
+        logging.FileHandler("tradear.log", encoding="utf-8"),
+        logging.StreamHandler()
+    ]
+)
 
 pd.set_option('future.no_silent_downcasting', True)
 
@@ -12,20 +21,20 @@ try:
     with open('./data/calculated_bitcoin_data.json', 'r') as f:
         data = json.load(f)
 except FileNotFoundError:
-    print("Fehler: './data/calculated_bitcoin_data.json' nicht gefunden.")
+    logging.error("Fehler: './data/calculated_bitcoin_data.json' nicht gefunden.")
     sys.exit(1)
 except json.JSONDecodeError as e:
-    print(f"Fehler beim Parsen der JSON-Datei: {e}")
+    logging.error(f"Fehler beim Parsen der JSON-Datei: {e}")
     sys.exit(1)
 except Exception as e:
-    print(f"Unerwarteter Fehler beim Laden der Daten: {e}")
+    logging.critical(f"Unerwarteter Fehler beim Laden der Daten: {e}")
     sys.exit(1)
 
 try:
     df = pd.DataFrame(data)
     df.replace("Unzureichende Daten", np.nan, inplace=True)
 except Exception as e:
-    print(f"Fehler beim Erstellen des DataFrames: {e}")
+    logging.error(f"Fehler beim Erstellen des DataFrames: {e}")
     sys.exit(1)
 
 feature_cols = ['open', 'high', 'low', 'close', 'volume',
@@ -39,21 +48,21 @@ try:
     df['Doji'] = df['Doji'].astype(int)
     df['Golden_Cross'] = df['Golden_Cross'].astype(int)
 except Exception as e:
-    print(f"Fehler bei der Feature-Vorbereitung: {e}")
+    logging.error(f"Fehler bei der Feature-Vorbereitung: {e}")
     sys.exit(1)
 
 try:
     X = df[feature_cols]
     y = df['target']
 except Exception as e:
-    print(f"Fehler beim Extrahieren der Features und Zielvariablen: {e}")
+    logging.error(f"Fehler beim Extrahieren der Features und Zielvariablen: {e}")
     sys.exit(1)
 
 try:
     model = RandomForestRegressor(n_estimators=100, random_state=42)
     model.fit(X, y)
 except Exception as e:
-    print(f"Fehler beim Trainieren des Modells: {e}")
+    logging.error(f"Fehler beim Trainieren des Modells: {e}")
     sys.exit(1)
 
 steps_ahead = 10
@@ -61,7 +70,7 @@ try:
     last_timestamp = pd.to_datetime(df.iloc[-1]['timestamp']).floor('min')
     last_features = X.iloc[-1].copy()
 except Exception as e:
-    print(f"Fehler beim Bestimmen der letzten Features: {e}")
+    logging.error(f"Fehler beim Bestimmen der letzten Features: {e}")
     sys.exit(1)
 
 future_predictions = []
@@ -87,13 +96,13 @@ for step in range(steps_ahead):
 
         last_features = new_features
     except Exception as e:
-        print(f"Fehler bei der Zukunftsprognose (Schritt {step+1}): {e}")
+        logging.error(f"Fehler bei der Zukunftsprognose (Schritt {step+1}): {e}")
         sys.exit(1)
 
 try:
     historical = df[['timestamp', 'close']].copy()
 except Exception as e:
-    print(f"Fehler beim Extrahieren der historischen Daten: {e}")
+    logging.error(f"Fehler beim Extrahieren der historischen Daten: {e}")
     sys.exit(1)
 
 future = pd.DataFrame({
@@ -112,7 +121,7 @@ for i, p in enumerate(future_predictions):
         else:
             future.loc[i, 'predicted_close'] = future.loc[i-1, 'predicted_close'] * (1 + p)
     except Exception as e:
-        print(f"Fehler beim Berechnen der predicted_close für Schritt {i+1}: {e}")
+        logging.error(f"Fehler beim Berechnen der predicted_close für Schritt {i+1}: {e}")
         sys.exit(1)
 
 # SL/TP-Optimierung (24h zurück)
@@ -125,7 +134,7 @@ try:
                                                 abs(row["low"] - row["close"])), axis=1)
     avg_atr = recent["TR"].mean()
 except Exception as e:
-    print(f"Fehler bei der ATR-Berechnung: {e}")
+    logging.error(f"Fehler bei der ATR-Berechnung: {e}")
     sys.exit(1)
 
 tp_options = [0.5, 1.0, 1.5, 2.0]
@@ -159,7 +168,7 @@ try:
     TP_MULTIPLIER = best_result["TP_MULTIPLIER"]
     SL_MULTIPLIER = best_result["SL_MULTIPLIER"]
 except Exception as e:
-    print(f"Fehler bei der SL/TP-Optimierung: {e}")
+    logging.error(f"Fehler bei der SL/TP-Optimierung: {e}")
     sys.exit(1)
 
 # Nur den besten Trade markieren
@@ -201,7 +210,7 @@ try:
                     "sl": sl
                 }
 except Exception as e:
-    print(f"Fehler beim Markieren des besten Trades: {e}")
+    logging.error(f"Fehler beim Markieren des besten Trades: {e}")
     sys.exit(1)
 
 # Nur für den besten Trade setzen
@@ -212,7 +221,7 @@ if best_idx is not None:
         future.loc[best_idx, 'stop_loss'] = best_values["sl"]
         future.loc[best_idx, 'top_trade'] = True
     except Exception as e:
-        print(f"Fehler beim Setzen des besten Trades: {e}")
+        logging.warning(f"Fehler beim Setzen des besten Trades: {e}")
 
 # Kombinieren & Speichern
 combined = []
@@ -239,13 +248,13 @@ try:
             'top_trade': row['top_trade']
         })
 except Exception as e:
-    print(f"Fehler beim Kombinieren der Ergebnisse: {e}")
+    logging.error(f"Fehler beim Kombinieren der Ergebnisse: {e}")
     sys.exit(1)
 
 try:
     with open('./data/combined_predictions.json', 'w') as f:
         json.dump(combined, f, indent=2)
-    print("Vorhersagen gespeichert. Top-Trade markiert.")
+    logging.info("Vorhersagen gespeichert. Top-Trade markiert.")
 except Exception as e:
-    print(f"Fehler beim Speichern der kombinierten Ergebnisse: {e}")
+    logging.error(f"Fehler beim Speichern der kombinierten Ergebnisse: {e}")
     sys.exit(1)
