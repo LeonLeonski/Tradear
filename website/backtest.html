@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Backtest-Ergebnisse</title>
+  <title>Paper-Trading & Backtest</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
@@ -30,7 +30,8 @@
 </nav>
 
 <div class="container">
-  <h2 class="mb-4 text-center">Backtest-Ergebnisse der Trades</h2>
+  <h2 class="mb-4 text-center">Paper-Trading & Backtest-Ergebnisse</h2>
+  <div id="portfolio" class="mb-3"></div>
   <div id="stats" class="mb-3"></div>
   <div class="table-responsive">
     <table class="table table-striped" id="backtestTable">
@@ -40,7 +41,9 @@
           <th>Richtung</th>
           <th>TP</th>
           <th>SL</th>
+          <th>Status</th>
           <th>Ergebnis</th>
+          <th>PnL</th>
         </tr>
       </thead>
       <tbody></tbody>
@@ -51,27 +54,44 @@
 <script>
 fetch('../data/backtest_results.json')
   .then(res => res.json())
-  .then(data => {
-    // Nur Trades mit Richtung anzeigen
-    const trades = data.filter(d => d.trade_direction);
+  .then(json => {
+    const data = json.trades || [];
+    const portfolio = json.portfolio || {};
     const tbody = document.querySelector('#backtestTable tbody');
-    let win = 0, loss = 0, open = 0;
+    let win = 0, loss = 0, open = 0, sumPnL = 0;
 
-    trades.forEach(trade => {
+    data.forEach(trade => {
       let resultClass = '';
       if (trade.trade_result === 'win') { resultClass = 'table-success'; win++; }
       else if (trade.trade_result === 'loss') { resultClass = 'table-danger'; loss++; }
       else { resultClass = 'table-warning'; open++; }
+
+      sumPnL += trade.pnl || 0;
 
       const row = `<tr class="${resultClass}">
         <td>${new Date(trade.timestamp).toLocaleString()}</td>
         <td>${trade.trade_direction ? trade.trade_direction.toUpperCase() : ''}</td>
         <td>${trade.take_profit !== null ? trade.take_profit.toFixed(2) : ''}</td>
         <td>${trade.stop_loss !== null ? trade.stop_loss.toFixed(2) : ''}</td>
+        <td>${trade.status ? trade.status.toUpperCase() : ''}</td>
         <td>${trade.trade_result ? trade.trade_result.toUpperCase() : ''}</td>
+        <td>${trade.pnl !== undefined && trade.pnl !== null ? trade.pnl.toFixed(2) : ''}</td>
       </tr>`;
       tbody.insertAdjacentHTML('beforeend', row);
     });
+
+    // Portfolio anzeigen
+    const portfolioDiv = document.getElementById('portfolio');
+    portfolioDiv.innerHTML = `
+      <div class="alert alert-primary">
+        <strong>Virtuelles Portfolio:</strong><br>
+        Kontostand: <b>${portfolio.balance !== undefined ? portfolio.balance.toFixed(2) : sumPnL.toFixed(2)} USD</b><br>
+        Geschlossene Trades: ${portfolio.closed_trades || (win + loss)}<br>
+        Gewinn-Trades: ${portfolio.win || win} |
+        Verlust-Trades: ${portfolio.loss || loss} <br>
+        Winrate: ${portfolio.winrate !== undefined ? portfolio.winrate.toFixed(1) : (win/(win+loss)*100).toFixed(1)}%
+      </div>
+    `;
 
     // Statistik anzeigen
     const statsDiv = document.getElementById('stats');

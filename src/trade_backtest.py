@@ -15,31 +15,49 @@ def setup_logging():
     )
 
 def load_existing_backtests(output_json_path):
-    """Lädt bestehende Backtest-Top-Trades, falls vorhanden."""
     if os.path.exists(output_json_path):
         with open(output_json_path, "r", encoding="utf-8") as f:
             try:
-                return json.load(f)
+                data = json.load(f)
+                # Wenn Datei ein dict mit "trades" enthält, gib diese Liste zurück
+                if isinstance(data, dict) and "trades" in data:
+                    return data["trades"]
+                # Falls Datei eine Liste ist, gib sie direkt zurück
+                if isinstance(data, list):
+                    return data
+                # Sonst leere Liste
+                return []
             except Exception:
                 return []
     else:
-        # Datei existiert nicht, also erstelle sie leer
         with open(output_json_path, "w", encoding="utf-8") as f:
-            json.dump([], f, indent=2, ensure_ascii=False)
+            json.dump({"trades": [], "portfolio": {}}, f, indent=2, ensure_ascii=False)
         return []
     return []
 
-def save_backtests(backtests, output_json_path):
-    """Speichert alle Backtest-Top-Trades."""
+def clean_for_json(obj):
+    if isinstance(obj, float) and (math.isnan(obj) or math.isinf(obj)):
+        return None
+    if isinstance(obj, dict):
+        return {k: clean_for_json(v) for k, v in obj.items()}
+    if isinstance(obj, list):
+        return [clean_for_json(x) for x in obj]
+    return obj
+
+def save_backtests(backtests, portfolio, output_json_path):
     # Konvertiere alle Timestamps zu Strings
     for trade in backtests:
         if "timestamp" in trade and not isinstance(trade["timestamp"], str):
             trade["timestamp"] = str(trade["timestamp"])
+    # Speichere Trades und Portfolio gemeinsam
+    out = {
+        "trades": clean_for_json(backtests),
+        "portfolio": portfolio
+    }
     with open(output_json_path, "w", encoding="utf-8") as f:
-        json.dump(clean_for_json(backtests), f, indent=2, ensure_ascii=False)
+        json.dump(out, f, indent=2, ensure_ascii=False)
 
 def trade_already_tracked(existing, trade):
-    """Prüft, ob ein Top-Trade schon im Backtest-Log ist (z.B. anhand Timestamp und Richtung)."""
     for t in existing:
         if (
             t.get("timestamp") == trade.get("timestamp")
@@ -51,11 +69,10 @@ def trade_already_tracked(existing, trade):
     return False
 
 def update_trade_result(trade, candles, lookahead=10):
-    """Überprüft, ob der Trade beendet wurde und aktualisiert trade_result."""
-    # Finde Index der Einstiegs-Kerze
     entry_idx = candles.index[candles['timestamp'] == trade['timestamp']]
     if len(entry_idx) == 0:
         trade["trade_result"] = "not_found"
+        trade["status"] = "closed"
         return trade
     entry_idx = entry_idx[0]
 
@@ -63,6 +80,7 @@ def update_trade_result(trade, candles, lookahead=10):
     tp = trade['take_profit']
     sl = trade['stop_loss']
     trade_result = trade.get("trade_result", "open")
+    status = "open"
     for i in range(1, lookahead + 1):
         if entry_idx + i >= len(candles):
             break
@@ -71,26 +89,57 @@ def update_trade_result(trade, candles, lookahead=10):
         if direction == "long":
             if high >= tp:
                 trade_result = "win"
+                status = "closed"
                 break
             if low <= sl:
                 trade_result = "loss"
+                status = "closed"
                 break
         elif direction == "short":
             if low <= tp:
                 trade_result = "win"
+                status = "closed"
                 break
             if high >= sl:
                 trade_result = "loss"
+                status = "closed"
                 break
     trade["trade_result"] = trade_result
+    trade["status"] = status
     return trade
 
+def calculate_pnl(trade):
+    # Simuliere 1 BTC pro Trade
+    if trade["trade_result"] == "win":
+        return abs(trade["take_profit"] - trade["predicted_close"])
+    elif trade["trade_result"] == "loss":
+        return -abs(trade["stop_loss"] - trade["predicted_close"])
+    return 0
+
+def update_portfolio(backtests, initial_balance=0):
+    balance = initial_balance
+    closed_trades = 0
+    win = 0
+    loss = 0
+    for trade in backtests:
+        if trade.get("status") == "closed":
+            if "pnl" not in trade:
+                trade["pnl"] = calculate_pnl(trade)
+            balance += trade["pnl"]
+            closed_trades += 1
+            if trade["trade_result"] == "win":
+                win += 1
+            elif trade["trade_result"] == "loss":
+                loss += 1
+    return {
+        "balance": balance,
+        "closed_trades": closed_trades,
+        "win": win,
+        "loss": loss,
+        "winrate": (win / closed_trades * 100) if closed_trades else 0
+    }
+
 def backtest_top_trade(trades_json_path, candles_json_path, output_json_path, lookahead=10):
-    """
-    Hängt den aktuellen Top-Trade an die Backtest-Datei an (falls neu)
-    und prüft für alle bisherigen Top-Trades, ob sie beendet wurden.
-    """
-    # Lade aktuelle Trades und Candles
     with open(trades_json_path, "r", encoding="utf-8") as f:
         trades = pd.read_json(f)
     with open(candles_json_path, "r", encoding="utf-8") as f:
@@ -98,17 +147,15 @@ def backtest_top_trade(trades_json_path, candles_json_path, output_json_path, lo
     if "Date" in candles.columns:
         candles["timestamp"] = candles["Date"]
 
-    # Lade bisherige Backtests (erstellt Datei falls nicht vorhanden)
     existing_backtests = load_existing_backtests(output_json_path)
 
     # Finde aktuellen Top-Trade
     top_trades = trades[trades.get("top_trade", False) == True]
     if not top_trades.empty:
         top_trade = top_trades.iloc[0].to_dict()
-        # Prüfe, ob dieser Trade schon getrackt wird
         if not trade_already_tracked(existing_backtests, top_trade):
-            # Setze trade_result initial auf "open"
             top_trade["trade_result"] = "open"
+            top_trade["status"] = "open"
             existing_backtests.append(top_trade)
 
     # Aktualisiere alle bisherigen Top-Trades
@@ -117,18 +164,12 @@ def backtest_top_trade(trades_json_path, candles_json_path, output_json_path, lo
         updated_trade = update_trade_result(trade, candles, lookahead=lookahead)
         updated_backtests.append(updated_trade)
 
-    # Speichern
-    save_backtests(updated_backtests, output_json_path)
-    logging.info(f"Backtest-Top-Trades aktualisiert und gespeichert in {output_json_path}")
+    # Portfolio berechnen
+    portfolio = update_portfolio(updated_backtests, initial_balance=0)
 
-def clean_for_json(obj):
-    if isinstance(obj, float) and (math.isnan(obj) or math.isinf(obj)):
-        return None
-    if isinstance(obj, dict):
-        return {k: clean_for_json(v) for k, v in obj.items()}
-    if isinstance(obj, list):
-        return [clean_for_json(x) for x in obj]
-    return obj
+    # Speichern
+    save_backtests(updated_backtests, portfolio, output_json_path)
+    logging.info(f"Paper-Trading-Backtest und Portfolio gespeichert in {output_json_path}")
 
 if __name__ == "__main__":
     setup_logging()
