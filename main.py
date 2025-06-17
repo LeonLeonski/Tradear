@@ -4,9 +4,9 @@ import os
 
 # Liste der Skripte, die nacheinander ausgeführt werden sollen
 scripts = [
-    "code/getData.py",
-    "code/calculateData.py",
-    "code/getMultiplePredictions.py"
+    "src/getData.py",
+    "src/calculateData.py",
+    "src/getMultiplePredictions.py"
 ]
 
 def run_script(script_name):

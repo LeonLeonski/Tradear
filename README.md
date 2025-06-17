@@ -17,6 +17,18 @@ python main.py
 
 ---
 
+## 2. Tests ausführen
+
+```bash
+# pytest installieren (falls noch nicht vorhanden)
+pip install pytest
+
+# Tests ausführen (im Projektordner)
+python -m pytest
+```
+
+---
+
 # Roadmap & To-Do-Liste
 
 ## To-Dos (Kurzfristig)
@@ -24,7 +36,7 @@ python main.py
 - [X] Fehlerbehandlung in allen Skripten verbessern (z.B. try/except für Dateioperationen)
 - [X] Code modularisieren: Wiederverwendbare Funktionen für Indikatoren und Datenverarbeitung auslagern
 - [X] Logging statt print-Statements verwenden
-- [ ] Unit Tests für zentrale Funktionen schreiben
+- [X] Unit Tests für zentrale Funktionen schreiben
 - [ ] Konfigurationsdatei für Parameter (API-Keys, Schwellenwerte, Limits) einführen
 - [X] `.gitignore`-Datei korrigieren (`combined_predictions.json` statt `combinded_predictions.json`)
 - [X] Dokumentation der einzelnen Skripte und deren Zusammenspiel ergänzen
@@ -34,7 +46,7 @@ python main.py
 
 1. **Zentrales Hauptskript**
    - [X] Ein zentrales Skript erstellen, das die Einzelschritte orchestriert (z.B. `main.py`)
-   - [ ] Einzelne Logik in Modulen/Funktionen belassen
+   - [X] Einzelne Logik in Modulen/Funktionen belassen
 
 2. **Effizientere Datenbeschaffung**
    - [ ] Mechanismus implementieren, der nur neue Daten von der API holt (letztes Datum prüfen)
