@@ -29,6 +29,26 @@ python -m pytest
 
 ---
 
+## 3. Konfiguration anpassen (`config.py`)
+
+Die wichtigsten Parameter des Projekts sind zentral in der Datei [`src/config.py`](src/config.py) abgelegt.  
+Hier kannst du z.B. die Anzahl der geladenen Binance-Kerzen, Modellparameter und Optimierungsoptionen anpassen:
+
+```python
+# src/config.py (Beispiel)
+BINANCE_LIMIT = 1440  # Anzahl der Kerzen (z.B. 1440 für 24h)
+RANDOM_FOREST_ESTIMATORS = 100  # Anzahl Bäume im RandomForest
+TP_OPTIONS = [0.5, 1.0, 1.5, 2.0]  # Take-Profit-Multiplikatoren
+SL_OPTIONS = [0.5, 1.0, 1.5, 2.0]  # Stop-Loss-Multiplikatoren
+SIGNIFICANCE_LEVEL = 0.05  # Schwellenwert für P-Wert
+```
+
+**So nutzt du die Konfiguration:**  
+Alle Hauptskripte importieren diese Parameter automatisch.  
+Wenn du z.B. mehr oder weniger Daten laden, andere Modellgrößen oder andere Optimierungsoptionen testen willst, passe einfach die Werte in `config.py` an und starte das Projekt wie gewohnt.
+
+---
+
 # Roadmap & To-Do-Liste
 
 ## To-Dos (Kurzfristig)
@@ -37,7 +57,7 @@ python -m pytest
 - [X] Code modularisieren: Wiederverwendbare Funktionen für Indikatoren und Datenverarbeitung auslagern
 - [X] Logging statt print-Statements verwenden
 - [X] Unit Tests für zentrale Funktionen schreiben
-- [ ] Konfigurationsdatei für Parameter (API-Keys, Schwellenwerte, Limits) einführen
+- [X] Konfigurationsdatei für Parameter (API-Keys, Schwellenwerte, Limits) einführen
 - [X] `.gitignore`-Datei korrigieren (`combined_predictions.json` statt `combinded_predictions.json`)
 - [X] Dokumentation der einzelnen Skripte und deren Zusammenspiel ergänzen
 - [X] Deprecated Nachrichten entfernen

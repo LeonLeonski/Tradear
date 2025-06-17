@@ -4,6 +4,7 @@ from sklearn.ensemble import RandomForestRegressor
 import json
 import sys
 import logging
+from src import config  # Importiere die Parameter aus config.py
 
 def setup_logging():
     logging.basicConfig(
@@ -47,7 +48,9 @@ def prepare_features(df, feature_cols):
 
 def train_model(X, y):
     try:
-        model = RandomForestRegressor(n_estimators=100, random_state=42)
+        model = RandomForestRegressor(
+            n_estimators=config.RANDOM_FOREST_ESTIMATORS, random_state=42
+        )
         model.fit(X, y)
         return model
     except Exception as e:
@@ -88,8 +91,8 @@ def optimize_sl_tp(df):
                                                     abs(row["high"] - row["close"]),
                                                     abs(row["low"] - row["close"])), axis=1)
         avg_atr = recent["TR"].mean()
-        tp_options = [0.5, 1.0, 1.5, 2.0]
-        sl_options = [0.5, 1.0, 1.5, 2.0]
+        tp_options = config.TP_OPTIONS
+        sl_options = config.SL_OPTIONS
         best_result = {"Win_Rate": -1}
         for tp in tp_options:
             for sl in sl_options:
@@ -202,7 +205,8 @@ def main():
     X = df[feature_cols]
     y = df['target']
     model = train_model(X, y)
-    future_predictions, future_timestamps = predict_future(model, X, df)
+    # Steps ahead kann als Parameter übergeben werden, z.B. config.BINANCE_LIMIT oder separat
+    future_predictions, future_timestamps = predict_future(model, X, df, steps_ahead=10)
     historical = df[['timestamp', 'close']].copy()
     future = pd.DataFrame({
         'timestamp': future_timestamps,
