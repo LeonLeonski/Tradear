@@ -3,7 +3,7 @@
 *.json
 bc_data.xml
 calculated_bitcoin_data.json
-combinded_predictions.json
+combined_predictions.json
 
 # Ignore Python cache and environment files
 __pycache__/
