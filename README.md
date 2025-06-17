@@ -26,13 +26,13 @@ python main.py
 - [ ] Logging statt print-Statements verwenden
 - [ ] Unit Tests für zentrale Funktionen schreiben
 - [ ] Konfigurationsdatei für Parameter (API-Keys, Schwellenwerte, Limits) einführen
-- [ ] `.gitignore`-Datei korrigieren (`combined_predictions.json` statt `combinded_predictions.json`)
+- [X] `.gitignore`-Datei korrigieren (`combined_predictions.json` statt `combinded_predictions.json`)
 - [ ] Dokumentation der einzelnen Skripte und deren Zusammenspiel ergänzen
 
 ## Roadmap (Mittelfristig)
 
 1. **Zentrales Hauptskript**
-   - [ ] Ein zentrales Skript erstellen, das die Einzelschritte orchestriert (z.B. `main.py`)
+   - [X] Ein zentrales Skript erstellen, das die Einzelschritte orchestriert (z.B. `main.py`)
    - [ ] Einzelne Logik in Modulen/Funktionen belassen
 
 2. **Effizientere Datenbeschaffung**

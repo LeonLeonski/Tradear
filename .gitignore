@@ -1,9 +1,7 @@
 # Ignore data files
 *.xml
 *.json
-bc_data.xml
-calculated_bitcoin_data.json
-combined_predictions.json
+data/
 
 # Ignore Python cache and environment files
 __pycache__/
