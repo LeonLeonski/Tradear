@@ -150,7 +150,9 @@ except Exception as e:
 
 # 5. Ersetzen von NaN-Werten durch "Unzureichende Daten"
 try:
-    df.fillna("Unzureichende Daten", inplace=True)
+    for col in df.columns:
+        df[col] = df[col].fillna("Unzureichende Daten")
+        df[col] = df[[col]].infer_objects(copy=False)[col]
 except Exception as e:
     print(f"Fehler beim Ersetzen von NaN-Werten: {e}")
 

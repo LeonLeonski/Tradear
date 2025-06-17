@@ -5,6 +5,8 @@ import json
 import sys
 import os
 
+pd.set_option('future.no_silent_downcasting', True)
+
 # Daten laden und vorbereiten
 try:
     with open('./data/calculated_bitcoin_data.json', 'r') as f:
@@ -70,7 +72,7 @@ for step in range(steps_ahead):
         next_timestamp = last_timestamp + pd.Timedelta(minutes=step + 1)
         future_timestamps.append(next_timestamp.strftime('%Y-%m-%d %H:%M:%S'))
 
-        pred_change = model.predict([last_features])[0]
+        pred_change = model.predict(pd.DataFrame([last_features]))[0]
         future_predictions.append(pred_change)
 
         last_close = last_features['close']

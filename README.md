@@ -21,7 +21,7 @@ python main.py
 
 ## To-Dos (Kurzfristig)
 
-- [ ] Fehlerbehandlung in allen Skripten verbessern (z.B. try/except für Dateioperationen)
+- [X] Fehlerbehandlung in allen Skripten verbessern (z.B. try/except für Dateioperationen)
 - [ ] Code modularisieren: Wiederverwendbare Funktionen für Indikatoren und Datenverarbeitung auslagern
 - [ ] Logging statt print-Statements verwenden
 - [ ] Unit Tests für zentrale Funktionen schreiben
