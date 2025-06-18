@@ -5,6 +5,7 @@ import scipy.stats as stats
 import sys
 import os
 import logging
+from src import config
 
 def setup_logging():
     logging.basicConfig(
@@ -156,6 +157,63 @@ def save_to_json(df, columns_to_save, filename):
     except Exception as e:
         logging.error(f"Fehler beim Speichern der Ergebnisse in die JSON-Datei: {e}")
 
+def calculate_rsi(df, period=14):
+    """Berechnet den Relative Strength Index (RSI)."""
+    try:
+        delta = df['close'].diff()
+        gain = (delta.where(delta > 0, 0)).rolling(window=period).mean()
+        loss = (-delta.where(delta < 0, 0)).rolling(window=period).mean()
+        rs = gain / loss
+        df['RSI'] = 100 - (100 / (1 + rs))
+    except Exception as e:
+        logging.warning(f"Fehler bei calculate_rsi: {e}")
+        df['RSI'] = None
+    return df
+
+def calculate_macd(df, fast=12, slow=26, signal=9):
+    """Berechnet MACD, MACD-Signal und MACD-Histogramm."""
+    try:
+        ema_fast = df['close'].ewm(span=fast, adjust=False).mean()
+        ema_slow = df['close'].ewm(span=slow, adjust=False).mean()
+        df['MACD'] = ema_fast - ema_slow
+        df['MACD_Signal'] = df['MACD'].ewm(span=signal, adjust=False).mean()
+        df['MACD_Hist'] = df['MACD'] - df['MACD_Signal']
+    except Exception as e:
+        logging.warning(f"Fehler bei calculate_macd: {e}")
+        df['MACD'] = df['MACD_Signal'] = df['MACD_Hist'] = None
+    return df
+
+def calculate_bollinger_bandwidth(df, period=20, num_std=2):
+    """Berechnet die Bollinger Band Width."""
+    try:
+        sma = df['close'].rolling(window=period).mean()
+        std = df['close'].rolling(window=period).std()
+        upper = sma + num_std * std
+        lower = sma - num_std * std
+        df['BB_Width'] = (upper - lower) / sma
+    except Exception as e:
+        logging.warning(f"Fehler bei calculate_bollinger_bandwidth: {e}")
+        df['BB_Width'] = None
+    return df
+
+def calculate_rolling_volatility(df, period=20):
+    """Berechnet die Rolling Volatility (Standardabweichung der Renditen)."""
+    try:
+        df['Rolling_Volatility'] = df['close'].pct_change().rolling(window=period).std()
+    except Exception as e:
+        logging.warning(f"Fehler bei calculate_rolling_volatility: {e}")
+        df['Rolling_Volatility'] = None
+    return df
+
+def calculate_momentum(df, period=10):
+    """Berechnet das Momentum (Rate of Change)."""
+    try:
+        df['Momentum'] = df['close'].diff(period)
+    except Exception as e:
+        logging.warning(f"Fehler bei calculate_momentum: {e}")
+        df['Momentum'] = None
+    return df
+
 def main():
     setup_logging()
     root = load_xml_data('./data/bc_data.xml')
@@ -167,9 +225,18 @@ def main():
     df = calculate_volume_change(df)
     df = calculate_avg_volume(df, 20)
     calculate_correlation_and_pvalue(df)
+    # Neue technische Indikatoren:
+    df = calculate_rsi(df)
+    df = calculate_macd(df)
+    df = calculate_bollinger_bandwidth(df)
+    df = calculate_rolling_volatility(df)
+    df = calculate_momentum(df)
     df = fill_missing_with_string(df)
-    columns_to_save = ['timestamp', 'open', 'high', 'low', 'close', 'volume',
-                       'SMA_20', 'SMA_50', 'ATR', 'Doji', 'Golden_Cross', 'Volume_Change', 'Avg_Volume']
+    columns_to_save = [
+        'timestamp', 'open', 'high', 'low', 'close', 'volume',
+        'SMA_20', 'SMA_50', 'ATR', 'Doji', 'Golden_Cross', 'Volume_Change', 'Avg_Volume',
+        'RSI', 'MACD', 'MACD_Signal', 'MACD_Hist', 'BB_Width', 'Rolling_Volatility', 'Momentum'
+    ]
     save_to_json(df, columns_to_save, './data/calculated_bitcoin_data.json')
 
 if __name__ == "__main__":

@@ -82,25 +82,28 @@
   fetch('../data/combined_predictions.json')
     .then(res => res.json())
     .then(data => {
+      // Für neues Format: predictions als Array
+      if (data.predictions) data = data.predictions;
       if (data.length > 70) data = data.slice(-70);
       fullData = data;
 
       const actualData = fullData.filter(d => d.actual_close !== null).map(d => ({ x: new Date(d.timestamp), y: +d.actual_close }));
       const predictedData = fullData.filter(d => d.predicted_close !== null).map(d => ({ x: new Date(d.timestamp), y: +d.predicted_close }));
 
-      const topTrade = fullData.find(d => d.top_trade);
+      // Alle Top-Trades anzeigen
+      const topTrades = fullData.filter(d => d.top_trade);
 
       const startTime = fullData.length ? new Date(fullData[0].timestamp) : null;
       const endTime = fullData.length ? new Date(fullData[fullData.length - 1].timestamp) : null;
 
-      const takeProfitLine = topTrade && startTime && endTime ? [
-        { x: startTime, y: +topTrade.take_profit },
-        { x: endTime, y: +topTrade.take_profit }
+      const takeProfitLine = topTrades.length && startTime && endTime ? [
+        { x: startTime, y: +topTrades[0].take_profit },
+        { x: endTime, y: +topTrades[topTrades.length - 1].take_profit }
       ] : [];
 
-      const stopLossLine = topTrade && startTime && endTime ? [
-        { x: startTime, y: +topTrade.stop_loss },
-        { x: endTime, y: +topTrade.stop_loss }
+      const stopLossLine = topTrades.length && startTime && endTime ? [
+        { x: startTime, y: +topTrades[0].stop_loss },
+        { x: endTime, y: +topTrades[topTrades.length - 1].stop_loss }
       ] : [];
 
       const ctx = document.getElementById('combinedChart').getContext('2d');
@@ -147,7 +150,7 @@
             },
             {
               label: 'Top Trade',
-              data: topTrade ? [{ x: new Date(topTrade.timestamp), y: +topTrade.predicted_close }] : [],
+              data: topTrades.length ? topTrades.map(trade => ({ x: new Date(trade.timestamp), y: +trade.predicted_close })) : [],
               borderColor: 'rgba(0, 200, 83, 1)',
               backgroundColor: 'rgba(0, 200, 83, 1)',
               pointRadius: 6,
@@ -188,12 +191,20 @@
         }
       });
 
+      // Trade-Details-Liste
       const tradeList = document.getElementById('tradeDetails');
-      if (topTrade) {
-        const li = document.createElement('li');
-        li.className = 'list-group-item list-group-item-success';
-        li.innerHTML = `<strong>${topTrade.timestamp} | ${topTrade.trade_direction.toUpperCase()} | TP: ${topTrade.take_profit?.toFixed(2)} | SL: ${topTrade.stop_loss?.toFixed(2)} ← Top Trade</strong>`;
-        tradeList.appendChild(li);
+      tradeList.innerHTML = '';
+      if (topTrades.length > 0) {
+        topTrades.forEach(trade => {
+          const li = document.createElement('li');
+          li.className = 'list-group-item list-group-item-success';
+          li.innerHTML = `
+            <strong>${trade.timestamp} | ${trade.trade_direction?.toUpperCase() || '-'} | TP: ${trade.take_profit?.toFixed(2)} | SL: ${trade.stop_loss?.toFixed(2)}</strong>
+            <br>
+            Confidence: <b>${trade.confidence !== undefined ? (100 * trade.confidence).toFixed(1) + '%' : '-'}</b>
+          `;
+          tradeList.appendChild(li);
+        });
       } else {
         const li = document.createElement('li');
         li.className = 'list-group-item';

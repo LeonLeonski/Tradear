@@ -3,6 +3,7 @@ import logging
 import os
 import json
 import math
+from src import config
 
 def setup_logging():
     logging.basicConfig(
@@ -79,7 +80,8 @@ def update_trade_result(trade, candles, lookahead=10):
     trade_result = trade.get("trade_result", "open")
     status = "open"
     exit_price = None
-    for i in range(1, lookahead + 1):
+    # Starte bei i=2, um Lookahead Bias zu vermeiden
+    for i in range(2, lookahead + 1):
         if entry_idx + i >= len(candles):
             break
         high = candles.iloc[entry_idx + i]['high']
@@ -109,6 +111,16 @@ def update_trade_result(trade, candles, lookahead=10):
     trade["trade_result"] = trade_result
     trade["status"] = status
     trade["exit_price"] = exit_price
+
+    # NEU: Überprüfe, ob der Trade wirklich einen Gewinn gemacht hat
+    if status == "closed" and exit_price is not None:
+        entry = trade.get('entry_price')
+        if entry is not None:
+            if direction == "long" and exit_price <= entry:
+                trade["trade_result"] = "loss"
+            if direction == "short" and exit_price >= entry:
+                trade["trade_result"] = "loss"
+
     trade["pnl"] = calculate_pnl(trade)
     return trade
 
@@ -155,7 +167,11 @@ def update_portfolio(backtests, initial_balance=0):
 
 def backtest_top_trade(trades_json_path, candles_json_path, output_json_path, lookahead=10):
     with open(trades_json_path, "r", encoding="utf-8") as f:
-        trades = pd.read_json(f)
+        data = json.load(f)
+        trades = pd.DataFrame(data["predictions"])
+        tp_multiplier = data.get("tp_multiplier", 1.5)
+        sl_multiplier = data.get("sl_multiplier", 1.0)
+        avg_atr = data.get("avg_atr", 100)
     with open(candles_json_path, "r", encoding="utf-8") as f:
         candles = pd.read_json(f)
     if "Date" in candles.columns:
@@ -163,16 +179,19 @@ def backtest_top_trade(trades_json_path, candles_json_path, output_json_path, lo
 
     existing_backtests = load_existing_backtests(output_json_path)
 
-    # Finde aktuellen Top-Trade
+    # Finde alle Top-Trades (es können jetzt mehrere pro Vorhersageperiode sein)
     top_trades = trades[trades.get("top_trade", False) == True]
-    if not top_trades.empty:
-        top_trade = top_trades.iloc[0].to_dict()
+    for _, top_trade_row in top_trades.iterrows():
+        top_trade = top_trade_row.to_dict()
+        # Ignoriere Trades mit zu geringer Confidence
+        if top_trade.get("confidence", 1.0) < 0.75:
+            continue
         if not trade_already_tracked(existing_backtests, top_trade):
             top_trade["trade_result"] = "open"
             top_trade["status"] = "open"
             top_trade["position_size"] = 1000  # Beispiel: 1000 USD pro Trade
-            # Hole den Einstiegspreis (close) aus den Candles zum Trade-Zeitpunkt
-            entry_row = candles[candles['timestamp'] == top_trade['timestamp']]
+            # Hole den Einstiegspreis (close) aus der nächsten verfügbaren Candle ab Trade-Zeitpunkt
+            entry_row = candles[candles['timestamp'] >= top_trade['timestamp']].head(1)
             if not entry_row.empty:
                 top_trade["entry_price"] = float(entry_row.iloc[0]['close'])
             else:
